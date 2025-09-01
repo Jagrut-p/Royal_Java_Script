@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add()
+        {
+        n1 = parseInt(document.form.No1.value);
+        n2 = parseInt(document.form.No2.value)
+        ans = n1 + n2;
+        alert(ans)
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="form">
+        No1: = <input type="text" name="No1"><br><br>
+        No2: = <input type="text" name="No2">
+        <input type="button" value="addition" onclick="add()">
+    </form>
+</body>
+</html>
