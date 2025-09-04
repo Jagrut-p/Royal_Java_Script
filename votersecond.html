@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function submit1()
+        {
+        no1 = parseInt((document.form.No1.value));
+        no2 = parseInt((document.form.No2.value));
+        select = (document.form.select.value);
+        if (select == "addition")
+        {
+            alert(ans = no1 + no2);
+        }
+        else if(select=="subtraction")
+        {
+            alert(ans = no1 - no2);
+        }
+        else if(select==division)
+        {
+            alert(ans=no1/no2);
+        }
+        else if(select==multiplication)
+        {
+            alert(ans=no1*no2);
+        }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="form">
+    No1: <input type="text" name="No1" id="">
+    No2: <input type="text" name="No2">
+    <select name="select" id="">
+        <option value="addition">Addition</option>
+        <option value="subtraction">Subtration</option>
+        <option value="mulitplication">Multiplication</option>
+        <option value="division">division</option>
+    </select>
+    <input type="button" value="Submit" onclick="submit1()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Percentage()
+    {
+    maths = parseInt((document.marks.maths.value));
+    science = parseInt((document.marks.science.value));
+    enginnering = parseInt((document.marks.enginnering.value));
+    ms = maths + science;
+    me = maths + enginnering;
+    per = (maths + science + enginnering)/300*100;
+    if (ms>=180)
+{
+    alert("PASS in Maths and Science");
+}
+else if (me >=190)
+{
+    alert("PASS in Maths and Enginnering");
+}
+else if (per >= 85) 
+{
+    alert("PASS in Percentage");
+}
+else
+{
+    alert("TRY AGAIN");
+}
+    }
+</script>
+<body>
+    <form action="" name="marks">
+   Enter marks of Maths: <input type="text" name="maths"> <br><br>
+   Enter marks of Scince: <input type="text" name="science"> <br> <br>
+   Enter marks of Enginnering: <input type="text" name="enginnering"><br> <br>
+   <input type="submit" onclick="Percentage()"><br> 
+</form>
+</body>
+</html>

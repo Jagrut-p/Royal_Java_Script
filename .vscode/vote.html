@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Voter()
+    {
+        name = document.form.name.value;
+        age = parseInt(document.form.age.value);
+        gender = document.form.gender.value;
+        if(age>=17 && gender=="male")
+    {
+        alert("Eligible for Vote.")
+    }
+    else if(age>=21 && gender=="female")
+    {
+        alert("Eligible for Vote")
+    }
+    else
+    {
+        alert("Not Eligible for vote.")
+    }
+    }
+</script>
+</script>
+<body>
+    <form action="" name="form">
+    <label for="name">Name:</label> <input id="name" type="text" name="name"> <br><br>
+    <label for="age">Age:</label> <input type="text" id="age" name="age"><br><br>
+    <label>Gender:</label> <label for="Male">Male</label> <input id="Male" type="radio" name="gender" value="Male"> <label for="female">Female</label> <input id="female" type="radio" name="gender" value="female"> <label for="other">Other </label> <input id="other" type="radio" name="gender" value="other"> <br><br>
+    <input type="button" value="submit" onclick="Voter()">
+    </form>
+</body>
+</html>

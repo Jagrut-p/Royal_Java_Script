@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function opera()
+    {
+    operation = (document.form1.operation.value);
+    No1 = document.form1.No1.value;
+    No2 = document.form1.No2.value;
+    if(operation=="Addition")
+{
+    alert(ans=No1+No2)
+}
+else if(operation=="Subtraction")
+{
+    alert(ans=No1-No2)
+}
+else if(operation=="Multiplication")
+{
+    alert(ans=No1*No2)
+}
+else if(operation=="Division")
+{
+    alert(ans=No1/No2)
+}
+else{
+    alert("Select a right operation")
+}
+    }
+    
+</script>
+<body>
+    <form action="" name="form1">
+       Enter No1: <input type="text" name="No1"> <br><br>
+       Enter No2: <input type="text" name="No2"><br><br>
+    <select name="operation" id="">
+        <option name="Select">Select</option>
+        <option name="Addition">Addition</option>
+        <option name="Subtraction">Subtraction</option>
+        <option name="Multiplication">Multiplication</option>
+        <option name="Division">Division</option>
+    </select>
+    <br><br>
+    <input type="button" value="Submit" onclick="opera()">
+    </form>
+</body>
+</html>
