@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function bgred()
+    {
+        document.bgColor = "red"
+        setTimeout(bggreen, 1000)
+    }
+    function bggreen()
+    {
+        document.bgColor="green"
+        setTimeout(bgblue,1000)
+    }
+    function bgblue()
+    {
+        document.bgColor="blue"
+        setTimeout(bgyellow,1000)
+    }
+    function bgyellow()
+    {
+        document.bgColor="yellow"
+        setTimeout(function(){bgred();},1000)
+    }
+</script>
+
+<body onload="bgred()">
+
+</body>
+
+</html>

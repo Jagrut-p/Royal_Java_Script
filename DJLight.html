@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function bgyellow(){
+        document.bgColor="yellow"
+        setTimeout(bgGreen,1000)
+    }
+    function bgGreen()
+    {
+        document.bgColor="green"
+        setTimeout(bgWhite,1000)
+    }
+    function bgWhite(){
+        document.bgColor="white"
+        setTimeout(bgRed,1000)
+    }
+    function bgRed(){
+        document.bgColor="red"
+        setTimeout(bgblue,1000)
+    }
+    function bgblue(){
+        document.bgColor="blue"
+        setTimeout(bgyellow,1000)
+    }
+</script>
+<body onload="bgyellow()">
+    
+</body>
+</html>
