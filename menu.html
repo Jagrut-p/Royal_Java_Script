@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    no1 = parseInt(prompt("Enter No1: "))
+    no2 = parseInt(prompt("Enter No2: "))
+    alert("Choose from the given Menu\n")
+    alert("1. Add\n 2. Subtract\n 3. Multiply\n 4. Division")
+    choose = parseInt(prompt("Enter a choice: "))
+    switch (choose) {
+        case 1:
+            add = no1 + no2
+            alert("Addition of two number is; " + add)
+            break
+        case 2:
+            sub = no1 - no2
+            alert("Subtration of two number is: " +sub)
+            break
+        case 3:
+            mul = no1 * no2
+            alert("Multiplication of two number is: " + mul)
+            break
+        case 4:
+            div = no1 / no2
+            alert("Division of two number is: " + div)
+            break
+        default:
+            alert("Enter a right choice.")
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>
