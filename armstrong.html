@@ -1,0 +1,50 @@
+<!-- 5. find reverse Number of given number
+    6. check number is palindrom or not
+    7. check number is Armstrong or not -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        temp = 0
+        count = 0
+        sum = 0
+        n = parseInt(prompt("Enter a number: "))
+        num = n
+        check = n
+        while (n > 0) 
+        {
+            temp = n % 10
+            count++
+            n = parseInt (n / 10)
+        }
+        while (num > 0) 
+        {
+            temp = num % 10
+            mul = 1
+            for (i = 1; i <=count; i++) 
+            {
+                mul = parseInt(mul * temp)
+            }
+            sum = sum + mul
+            num = parseInt (num / 10)
+            
+        }
+        if(check == sum)
+        {
+            document.writeln("It is a armstrong number.")
+        }
+        else
+        {
+            document.writeln("It is not a armstrong number.")
+        }
+    </script>
+</body>
+
+</html>

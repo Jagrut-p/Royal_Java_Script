@@ -1,0 +1,34 @@
+<!-- 5. find reverse Number of given number
+    6. check number is palindrom or not
+    7. check number is Armstrong or not -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        fibo = 0;
+        a = 0;
+        b = 1;
+        n = parseInt(prompt("Enter a number: "))
+        document.writeln(a)
+        document.writeln(b)
+        for (i = 0; i < n; i++) 
+        {
+            if (fibo <= n) 
+            {
+                fibo = a + b
+                document.writeln(fibo)
+                a = b // a = 1
+                b = fibo // b = fibo
+            }
+        }
+    </script>
+</body>
+
+</html>

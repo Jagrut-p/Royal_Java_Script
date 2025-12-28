@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- logic explained by ma'am -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        a = 0
+        b = 1
+        n = parseInt(prompt("Enter a number till where you want fibonacci series: "))
+        document.writeln(a)
+        document.writeln(b)
+            
+        for (i = 0; i < n; i++) 
+        {
+            fibo = a + b 
+            document.writeln(fibo)
+            a = b     // a = 2
+            b = fibo //  b = 3
+        }
+    </script>
+</body>
+
+</html>
