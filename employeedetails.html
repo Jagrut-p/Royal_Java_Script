@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bt {
+        text-align: center1;
+    }
+</style>
+
+<body>
+    <form action="" name="form1">
+        <table border="1px solid black">
+            <tr>
+                <td>
+                    <div class="name">Enter the employee Name: <input name="first_name" type="text"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="id">Enter the employee ID: <input type="text" name="id" id=""></div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="department">Enter the employee Department: <input type="text" name="department" id="">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="hire">Enter the employee hire date: <input type="date" name="hire" id=""></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Salary: <input type="number" name="salary"></td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <div class="bt"><input type="button" onclick="form12()" value="Submit" name="" id=""></div>
+                </td>
+            </tr>
+        </table>
+        <div id="dname">Name: </div>
+        <div id="did">Id: </div>
+        <div id="ddepartment">Department ID: </div>
+        <div id="dhire">Hire-Date: </div>
+        <div id="dsalary"></div>
+    </form>
+    <script>
+        function form12() {
+            let name;
+            name = document.form1.first_name.value;
+            id = document.form1.id.value;
+            department = document.form1.department.value;
+            hire = document.form1.hire.value;
+            salary = document.form1.salary.value;
+            first = document.getElementById('dname')
+            first.innerHTML = "<font color='yellow' size='40px'>Name: " + name + "</font>";
+            did1 = document.getElementById('did')
+            did1.innerHTML = "<font color='blue' size='40px'>Id: " + id + "</font>";
+            dep = document.getElementById('ddepartment')
+            dep.innerHTML = "<font color='red' size='40px'>Department ID: " + department + "</font>";
+            hiredate = document.getElementById('dhire')
+            hiredate.innerHTML = "<font color='green' size='40px'>Hire-Date: " + hire + "</font>";
+            // sal = document.getElementById('dsalary')
+            // sal.innerHTML = "<font color= 'purple' size='40px'>Salary: " + salary + "</font>";
+            sal = document.getElementById('dsalary')
+            sal.innerHTML = "<font color='purple' size='40px'>Salary: "+salary +"</font>";
+        }
+    </script>
+</body>
+
+</html>

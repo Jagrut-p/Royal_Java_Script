@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <table border="1px solid black">
+            <form action="" name="details">
+                <tr>
+                    <td>Name: <input type="text" name="first_name" id=""></td>
+                </tr>
+                <tr>
+                    <td>Email: <input type="email" name="mail"></td>
+                </tr>
+                <tr>
+                    <td>Contact: <input type="number" name="contact" id=""></td>
+                </tr>
+                <tr>
+                    <td>DOB: <input type="date" name="dob" id=""></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" value="Submit" onclick="details1()" name="" id=""></td>
+                </tr>
+            </form>
+        </table>
+        <div id="name">Name</div>
+        <div id="gmail">Mail: </div>
+        <div id="contact">Contact: </div>
+        <div id="dob">DOB: </div>
+    </center>
+    <script>
+        function details1() {
+            name = document.details.first_name.value;
+            emial = document.details.mail.value;
+            contac = document.details.contact.value;
+            do1 = document.details.dob.value;
+            first_name = document.getElementById('name')
+            first_name.innerHTML = "Name: " + name;
+            mail = document.getElementById('gmail')
+            mail.innerHTML = "Mail: "+ emial;
+            contact = document.getElementById('contact')
+            contact.innerHTML = "Contact: " + contac;
+            birth = document.getElementById('dob')
+            birth.innerHTML = "DOB: " + do1;
+        }
+    </script>
+</body>
+
+</html>

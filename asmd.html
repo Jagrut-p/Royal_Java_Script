@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <table border="1px solid black">
+            <form action="" name="operation">
+                <tr>
+                    <td>Enter No1: <input type="number" name="no1" id=""></td>
+                </tr>
+                <tr>
+                    <td>Enter No2: <input type="number" name="no2" id=""></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Addition" onclick="add()">
+                        <input type="button" value="Subtraction" onclick="sub()" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Multiplication" onclick="mul()" id="">
+                        <input type="button" value="Division" onclick="div()" id="Div">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" onclick="alloperation()" value="All" name="" id=""></td>
+                </tr>
+            </form>
+
+        </table>
+        <div id="adde">Addition: </div>
+        <div id="subt">Subtraction: </div>
+        <div id="mult">Multiplication: </div>
+        <div id="divi">Division</div>
+    </center>
+    <script>
+        function add() {
+            let no1, no2, no3;
+            no1 = parseInt(document.operation.no1.value)
+            no2 = parseInt(document.operation.no2.value)
+            no3 = no1 + no2;
+            added = document.getElementById('adde')
+            added.innerHTML = "Addition: " + no3;
+        }
+        function sub() {
+            let no1, no2, no4;
+            no1 = parseInt(document.operation.no1.value)
+            no2 = parseInt(document.operation.no2.value)
+            no4 = no1 - no2;
+            sub = document.getElementById('subt')
+            sub.innerHTML = "Subtraction " + no4;
+        }
+        function mul() {
+            let no1, no2, no5;
+            no1 = parseInt(document.operation.no1.value)
+            no2 = parseInt(document.operation.no2.value)
+            no5 = no1 * no2;
+            mul = document.getElementById('mult')
+            mult.innerHTML = "Multiplication: " + no5;
+        }
+        function div() {
+            let no1, no2, no6;
+            no1 = parseInt(document.operation.no1.value)
+            no2 = parseInt(document.operation.no2.value)
+            no6 = no1 / no2;
+            div = document.getElementById('divi')
+            div.innerHTML = "Division: " + no6;
+        }
+        function alloperation() {
+            let no1, no2, no3, no4, no5, no6, added, mul, sub, div;
+            no1 = parseInt(document.operation.no1.value)
+            no2 = parseInt(document.operation.no2.value)
+            no3 = no1 + no2;
+            no4 = no1 - no2;
+            no5 = no1 * no2;
+            no6 = no1 / no2;
+            added = document.getElementById('adde')
+            mul = document.getElementById('mult')
+            sub = document.getElementById('subt')
+            div = document.getElementById('divi')
+            added.innerHTML = "Addition: " + no3;
+            sub.innerHTML = "Subtraction " + no4;
+            mult.innerHTML = "Multiplication: " + no5;
+            div.innerHTML = "Division: " + no6;
+        }
+    </script>
+</body>
+
+</html>

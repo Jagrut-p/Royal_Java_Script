@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        <div class="red">Red<input value="red" type="radio" name="color" id=""></div>
+        <div class="blue">Blue<input value="blue" type="radio" name="color" id=""></div>
+        <div class="green">Green<input type="radio" value="green" name="color" id=""></div>
+        <div class="yellow">Yellow<input type="radio" value="yellow" name="color" id=""></div>
+        <input type="button" value="Submit" onclick="co()" name="" id="">
+    </form>
+    <p id="red">ANS</p>
+    <p id="blue"></p>
+    <p id="green"></p>
+    <p id="yellow"></p>
+    <script>
+        function co() {
+            var a, b, c, d, e, x,y
+            a = document.form1.color.value
+            if (a == 'red') {
+                x = document.getElementById('red')
+                x.innerHTML = "Red: "
+                document.bgColor = "red"
+            }
+            else if(a=='blue')
+            {
+                y = document.getElementById('blue')
+                y.innerHTML = "Blue"
+                document.bgColor = "Blue"
+            }
+            else if(a=='green')
+            {
+                y = document.getElementById('green')
+                y.innerHTML = "green"
+                document.bgColor = "green"
+            }
+            else if(a=='yellow')
+            {
+                y = document.getElementById('yellow')
+                y.innerHTML = "yellow"
+                document.bgColor = "yellow"
+            }
+        }
+    </script>
+</body>
+
+</html>

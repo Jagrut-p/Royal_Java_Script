@@ -1,0 +1,33 @@
+<!-- Perform: Addition, Multiplication, Division, Subtraction
+Employees Details Form 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <form action="" name="Addition">
+        <div>Enter a number 1: <input  name="a" type="number"></div>
+        <div>Enter a number 2: <input name="b" type="number"></div>
+        <input type="button" value="submit" name="" id="" onclick="Addition12()">
+        <p id="add">ADDITION: </p>
+        <p id="sub">SUBTRACTION: </p>
+        <p id="mul"></p>
+    </form>
+    <script>
+        var x,y,z,a,b,c,d
+        function Addition12()
+        {
+            var x,y,z
+            x = parseInt(document.Addition.a.value)
+            y = parseInt(document.Addition.b.value)
+            z = x+y
+            x = document.getElementById('add')
+            x.innerHTML = "ADDITION: "+z
+        }
+    </script>
+</body>
+</html>
