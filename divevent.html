@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #dv1{
+        width: 300px;
+        height: 100px;
+        border: 1px solid black;
+        margin-right: 50px;
+    }
+    #dv2{
+       width: 300px;
+        height: 100px;
+        border: 1px solid black;
+        margin-right: 50px;
+
+    }
+    #dv3{
+        width: 300px;
+        height: 100px;
+        border: 1px solid black;
+        margin-right: 50px;
+
+    }
+    #mdiv{
+        display: flex;
+    }
+</style>
+<body>
+    <center>
+    <div id="mdiv">
+    <div id="dv1"><center>Hello World</center></div>
+    <div id="dv2"><center>Ola World</center></div>
+    <div id="dv3"><center>Gracias World</center></div>
+    </div>
+    </center>
+    <button onmouseenter="div1()">Div1 Active</button>
+    </body>
+<script>
+    function div1() {
+        document.getElementById('dv1').style.backgroundColor = 'red'
+        document.getElementById('dv2').style.color = 'blue'
+        document.getElementById('dv3').style.fontSize = "40px"
+        console.log('hello')
+         document.getElementById('dv2').style.backgroundColor = 'green'
+        document.getElementById('dv1').style.fontFamily = "cursive"
+        document.getElementById('dv1').style.fontSize = "50px"
+        document.getElementById('dv2').style.fontSize = '50px'
+         document.getElementById('dv3').style.backgroundColor = 'yellow'
+
+    }
+</script>
+
+</html>

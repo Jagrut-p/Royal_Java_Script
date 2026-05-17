@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        First Name: <input type="text" name="fn"> <span id="errfn"></span><br>
+        Last Name: <input type="text" name="ln"> <span id="errln"></span><br>
+        Email: <input type="email" name="mail"> <span id="errml"></span><br>
+        Contact: <input type="text" name="number"> <span id="errct"></span><br>
+        Password: <input type="password" name="pass" id=""> <span id="errpw"></span><br>
+        <input type="button" name="" id="" value="Submit" onclick="formval()">
+    </form>
+</body>
+<script>
+    function formval() {
+        // let errmsg = ""
+        // flag = false
+        fn = document.form1.fn.value
+        ln = document.form1.ln.value
+        en = document.form1.mail.value
+        cn = document.form1.number.value
+        pw = document.form1.pass.value
+        if (fn.trim().length == 0)  
+    {
+        document.getElementById('errfn').innerHTML = "<font color='red'>* Enter a valid First Name</font>"
+        // flag = true
+        // errmsg += "Enter a valid First name\n";
+    }
+    if(ln.trim().length ==0)   
+    {
+        document.getElementById('errln').innerHTML = "<font color='red'>* Enter a valid Last Name</font>"
+        // flag = true
+        // errmsg += "Enter a valid Last Name\n";
+    }
+    if(en.trim().length ==0)
+    {
+        document.getElementById('errml').innerHTML = "<font color='red'>* Enter a valid Email</font>"
+        // flag = true
+        // errmsg += "Enter a valid Mail\n"
+    }
+    if(cn.trim().length == 0)
+    {
+        document.getElementById('errct').innerHTML = "<font color='red'>* Enter a valid Contact Number</font>"
+        // flag = true
+        // errmsg += "Enter a valid contact Number\n"
+    }
+    if(pw.trim().length==0)
+    {
+        document.getElementById('errpw').innerHTML = "<font color='red'>* Enter a valid Password</font>"
+        // flag = true
+        // errmsg += "Enter a valid Password\n"
+    }
+    // if(flag)
+    // {
+    //     alert(errmsg)
+    // }
+}
+</script>
+
+</html>

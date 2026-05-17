@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Regex</title>
+</head>
+<body>
+
+<script>
+
+// 1 Simple Character Match
+// console.log("1 /a/");
+// console.log(/a/.test("apple")); // true
+// console.log(/a/.test("sky"));   // false
+
+
+
+// console.log("1 /a/");
+// console.log(/a/.test("apple"));
+// console.log(/a/.test("sky"))
+
+/*
+This pattern checks if the letter "a" exists anywhere in the string.
+If at least one "a" is found, the result is true.
+If no "a" is found, the result is false.
+It searches for exact character matching.
+*/
+
+
+// 2 Dot (.)
+// console.log("2 /c.t/");
+// console.log(/c.t/.test("cat"));  // true
+// console.log(/c.t/.test("coat")); // false
+
+/*
+The dot means exactly one unknown character.
+"cat" is true because one letter is between c and t.
+"coat" is false because two letters are between c and t.
+Dot matches only one character.
+*/
+
+console.log(/c.t/.test("cat"));
+console.log(/c.t/.test("cat"));  // true
+
+
+// 3 Character Class
+// console.log("3 /[abc]/");
+// console.log(/[abc]/.test("apple")); // true
+// console.log(/[abc]/.test("dog"));   // false
+
+/*
+Square brackets allow matching one character from a group.
+If the string contains a, b, or c, it returns true.
+If none are present, it returns false.
+*/
+
+
+// 4 Digit Range
+// console.log("4 /[0-9]/");
+// console.log(/[0-9]/.test("abc1")); // true
+// console.log(/[0-9]/.test("abc"));  // false
+
+/*
+Matches any single digit from 0 to 9.
+If at least one number exists, result is true.
+If no numbers exist, result is false.
+*/
+
+
+// 5 \d
+// console.log("5 /\\d/");
+// console.log(/\d/.test("5"));   // true
+// console.log(/\d/.test("abc")); // false
+
+/*
+\d is shortcut for digits 0–9.
+If any digit exists in string, returns true.
+If not, returns false.
+*/
+
+
+// 6 +
+// console.log("6 /\\d+/");
+// console.log(/\d+/.test("1233")); // true
+// console.log(/\d+/.test("abc")); // false
+
+/*
++ means one or more repetitions.
+Matches full number like 123.
+If there are no digits, it returns false.
+*/
+
+
+// 7 *
+// console.log("7 /ab*/");
+// console.log(/ab*/.test("a"));    // true
+// console.log(/ab*/.test("aaaaabbb")); // true
+
+/*
+* means zero or more repetitions.
+Letter b may appear any number of times.
+Even zero times is allowed.
+*/
+
+
+// 8 ?
+// console.log("8 /colou?r/");
+// console.log(/colou?r/.test("color"));  // true
+// console.log(/colou?r/.test("colour")); // true
+// console.log(/colou?r/.test("colouur")); // false
+
+/*
+? makes previous character optional.
+u can appear once or not at all.
+If repeated twice, it fails.
+*/
+
+
+// 9 {3}
+// console.log("9 /\\d{3}/");
+// console.log(/\d{3}/.test("123")); // true
+// console.log(/\d{3}/.test("12"));  // false
+
+/*
+{3} means exactly three repetitions.
+If three digits exist together, true.
+If fewer or more in that position, false.
+*/
+
+
+// 10 ^
+// console.log("10 /^Hello/");
+// console.log(/^Hello/.test("Hello world")); // true
+// console.log(/^Hello/.test("world Hello")); // false
+
+/*
+^ checks start of string.
+Text must begin with Hello.
+If not at start, false.
+*/
+
+
+// 11$
+console.log("11 /end$/");
+// console.log(/end$/.test("The end")); // true
+// console.log(/end$/.test("ending"));  // false
+
+/*
+$ checks end of string.
+Word must appear at end position.
+Otherwise result is false.
+*/
+
+
+// 12 OR |
+// console.log("12 /(cat|dog)/");
+// console.log(/(cat|dog)/.test("I like dog")); // true
+// console.log(/(cat|dog)/.test("I like cow")); // false
+
+/*
+| works like OR condition.
+If either cat or dog is found, true.
+If neither exists, false.
+*/
+
+</script>
+
+</body>
+</html>
+
+

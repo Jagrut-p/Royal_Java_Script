@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter an array to sort it: <input type="text" name="list1">
+        <input type="button" onclick="psuh()" value="Push" id="">
+        <input type="button" onclick="rev()" id="" value="Sort">
+
+        <div id="display"></div>
+        <div id="sortdisplay"></div>
+    </form>
+    <script>
+        arr = []
+        function psuh() {
+            x = document.form1.list1.value
+            arr.push(x)
+            document.getElementById('display').innerHTML = arr
+        }
+        function rev() {
+            let temp
+            for (i = 0; i < arr.length; i++) {
+                if(arr[i]> arr[i+1])
+            {
+                temp = arr[i]
+                arr[i] = arr[i+1]
+                arr[i+1] = temp
+            }
+            document.getElementById('sortdisplay').innerHTML = arr
+            }
+        }
+    </script>
+</body>
+
+</html>

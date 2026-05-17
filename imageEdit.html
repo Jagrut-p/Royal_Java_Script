@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="blur1()">Blur</button>
+    <button onclick="grey1()">GreaySacle</button>
+    <button onclick="Bright1()">Brightness</button>
+    <button onclick="contrast1()">Contrast</button>
+    <button onclick="Hue-Rotate()">Hue-Rotate</button>
+    <button onclick="Invert()">Invert</button>
+    <br><br><br><br><br>
+    <img id="img1" src="./3.png" alt="">
+</body>
+
+</html>
+<script>
+    function blur1() {
+        console.log('1')
+        document.getElementById('img1').style.filter = "blur(50px)"
+    }
+    function grey1()
+    {
+        document.getElementById('img1').style.filter = "grayscale(50%)"
+    }
+    function Bright1()
+    {
+        document.getElementById('img1').style.filter = "brightness(150%)"
+    }
+    function contrast1()
+    {
+        document.getElementById('img1').style.filter = "contrast(40px)"
+    }
+</script>

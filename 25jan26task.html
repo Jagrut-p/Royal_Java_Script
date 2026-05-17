@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="fo2">
+        <div>Music: <input type="checkbox" name="hobbies" value="mus" id=""></div>
+        <div>Singing: <input type="checkbox" name="hobbies" value="sin" id=""></div>
+        <div>Dancing: <input type="checkbox" name="hobbies" value="dan" id=""></div>
+        <div>Drawing: <input type="checkbox" name="hobbies" value="dra"></div>
+        <div><input type="button" value="Submit" onclick="check1()" name="" id=""></div>
+    </form>
+    <div id="display"></div>
+    <script>
+        function check1() {
+            let i, data = "";
+            for (i = 0; i < document.fo2.hobbies.length; i++) {
+                if (document.fo2.hobbies[i].checked) {
+                    val = document.fo2.hobbies[i].value
+                    if (val == 'mus') {
+                        data += " Music"
+                    }
+                    else if (val == 'sin') {
+                        data += " Singing"
+                    }
+                    else if (val == 'dan') {
+                        data += " Dancing"
+                    }
+                    else if (val == 'dra') {
+                        data += " Drawing"
+                    }
+                }
+            }
+            document.getElementById('display').innerHTML = "Your favourate hobbies are: <br>"+data
+
+        }
+    </script>
+</body>
+
+</html>

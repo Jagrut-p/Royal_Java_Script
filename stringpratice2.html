@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Hello World Ola Ola <br>
+        Enter the starting index: <input type="number" name="start"><br>
+        Enter the ending index: <input type="number" name="end"><br>
+        <input type="button" name="" id="" onclick="gett()" value="Submit">
+    </form>
+    <p id="display"></p>
+    <script>
+        function gett() {
+            str = "Hello World Ola Ola"
+            x = document.form1.start.value
+            y = document.form1.end.value
+            z = str.slice(x, y)
+            document.getElementById('display').innerHTML = z
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    table {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+    }
+</style>
+
+
+<body>
+    <div>
+        <div>
+            <table id="r1" border="1px solid black">
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <form action="" name="form1">
+    <select onchange="launch()" name="sel" id="sel">
+        <option value="">--Select--</option>
+        <option value="r">Red</option>
+        <option value="b">Blue</option>
+        <option value="y">Yellow</option>
+        <option value="g">Green</option>
+    </select>
+    </form>
+</body>
+<script>
+    function launch() {
+        x = document.form1.sel.value
+        console.log(x)
+        if (x == 'r') {
+            document.getElementById('r1').style.backgroundColor = 'red'
+        }
+        else if (x == 'b') {
+            document.getElementById('r1').style.backgroundColor = 'blue'
+        }
+        else if(x == 'y')
+        {
+            document.getElementById('r1').style.backgroundColor= 'yellow'
+        }
+        else if(x == 'g')
+        {
+            document.getElementById('r1').style.backgroundColor = 'green'
+        }
+    }
+</script>
+
+</html>

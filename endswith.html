@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter a text: <input type="text" name="textt"><br>
+        Enter the text to check endswith <input type="text" name="endsw" id="">
+        <input type="button" value="Submit" onclick="ends()">
+    </form>
+    <p id="display"></p>
+    <script>
+        function ends() {
+            x = document.form1.endsw.value
+            str = document.form1.textt.value
+
+            if (str.endsWith(x)) {
+                document.getElementById('display').innerHTML = "Yes"
+            }
+            else {
+                document.getElementById('display').innerHTML = "No"
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter number for an array to get its reverse: <input name="num" type="text">
+        <input type="button" value="Push" onclick="pus()">
+        <input type="button" value="Reverse" onclick="rever()">
+    </form>
+    <p id="display"></p>
+    <p id="rdisplay"></p>
+    <script>
+        let arr = []
+        function pus() {
+            x = document.form1.num.value
+            arr.push(x)
+            document.getElementById('display').innerHTML = arr;
+        }
+        function rever() {
+            re = []
+            for (i = arr.length - 1; i >= 0; i--) {
+                re.push(arr[i])
+            }
+            document.getElementById('rdisplay').innerHTML = re;
+
+        }
+    </script>
+</body>
+
+</html>

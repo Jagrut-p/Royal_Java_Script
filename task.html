@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border: 1px solid black;
+        width: 60%;
+    }
+</style>
+
+<body>
+    <div>
+        Please Enter your personal Details
+        <form action="" name="form1">
+            First Name*: <input type="text" name="fn"><span id="errfn"></span><br>
+            Last Name*: <input type="text" name="ln" id=""><span id="errln"></span><br>
+            Street Address: <input type="text" name="st"><span id="errst"></span><br>
+            Town/City: <input type="text" name="toci"><span id="toci"></span><br>
+            Post/Zip Code: <input type="text" name="pc"><br><span id="pc"></span>
+            Telephone: <input type="text" name="te"><br><span id="te"></span>
+            Email Address*: <input type="email" name="ml"><br><span id="ml"></span>
+            <input type="button" onclick="formval()" value="Submit">
+        </form>
+    </div>
+    <script>
+        function formval() {
+            fn = document.form1.fn.value
+            ln = document.form1.ln.value
+            st = document.form1.st.value
+            toci = document.form1.toci.value
+            pc = document.form1.pc.value
+            te = document.form1.te.value
+            ml = document.form1.ml.value
+            if (fn.trim().length == 0) {
+                document.getElementById('errfn').innerHTML = "<font color='red'>Enter a valid First Name</font>";
+            }
+            if(ln.trim().length == 0)
+        {
+                document.getElementById('errln').innerHTML = "<font color='red'>Enter a valid Last Name</font>";
+        }
+        if(st.trim().length == 0)
+        {
+                document.getElementById('errst').innerHTML = "<font color='red'>Enter a valid Name</font>";
+        }
+        }
+    </script>
+</body>
+
+</html>

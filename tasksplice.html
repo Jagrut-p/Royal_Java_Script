@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter a text: <input name="string1" type="text"><br>
+        Enter the number of substring you don't want in the start: <input name="start" type="number"><br>`
+        Enter the number of substring you don't want in the end: <input name="end" type="number"><br>
+        <input type="button" value="Submit" onclick="task()">
+    </form>
+    <p id="display"></p>
+    <script>
+        function task() {
+            str = document.form1.string1.value
+            console.log(str)
+            x = parseInt(document.form1.start.value)
+            console.log(x)
+            y = parseInt(document.form1.end.value)
+            console.log(y)
+            document.getElementById('display').innerHTML = str.slice(x, y)
+        }
+    </script>
+</body>
+
+</html>

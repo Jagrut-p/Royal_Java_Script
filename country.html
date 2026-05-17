@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <form action="" name="form1">
+            <div>
+                <select name="country" id="">
+                    <option value="select">----SELECT----</option>
+                    <option value="IN">INDIA</option>
+                    <option value="US">UNITED STATES OF AMERICA</option>
+                    <option value="CH">CHINA</option>
+                    <option value="RU">RUSSUA</option>
+                </select>
+            </div>
+            <div><input type="button" value="SUBMIT" onclick="count()"></div>
+        </form>
+        <div id="nation">YOUR NATIONALITY IS: </div>
+        <div id="background"></div>
+    </table>
+    <script>
+        function count() {
+            let coun;
+            coun = document.form1.country.value
+            if (coun == 'IN') {
+                document.getElementById('nation').innerHTML = "YOUR NATIONALITY IS: INDIA"
+                document.getElementById('background').innerHTML = "<img src='.//india.png'>"
+            }
+            else if (coun == 'US') {
+                document.getElementById('nation').innerHTML = "YOUR NATIONALITY IS: USA"
+                document.getElementById('background').innerHTML = "<img src='./usa.png'>"
+            }
+            else if(coun == 'CH')
+            {
+                document.getElementById('nation').innerHTML = "YOUR NATIONALITY IS: CHINA"
+                document.getElementById('background').innerHTML = "<img src='./china.png'>"
+            }
+            else if(coun == 'RU')
+            {
+                document.getElementById('nation').innerHTML = "YOUR NATIONALITY IS: RUSSIA"
+                document.getElementById('background').innerHTML = "<img src='./download.png'>"
+            }
+        }
+    </script>
+</body>
+
+</html>

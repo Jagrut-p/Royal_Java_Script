@@ -1,0 +1,99 @@
+<!-- 
+ 3,5,7
+ both 
+ one
+ no one
+even/odd
+positive/negative 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <table border="1px solid black`">
+            <form action="" name="form1">
+                <tr>
+                    <td align="center">
+                        <div class="">Enter a number: <input type="number" name="num"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div>
+                            <select name="option" id="">
+                                <option value="P/N">Positive/Negative</option>
+                                <option value="E/O">EVEN/ODD</option>
+                                <option value="Divi">Divisibility</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <div><input type="button" value="Submit" onclick="operation()"></div>
+                    </td>
+                </tr>
+            </form>
+        </table>
+        <div id="ans"></div>
+    </center>
+    <script>
+        function operation() {
+            opt = document.form1.option.value;
+            num = parseInt(document.form1.num.value);
+            if (opt == 'P/N') {
+                if (num > 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='green'>Positive Number</font>"
+                }
+                else if (num < 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='red'>Negative Number</font>"
+                }
+            }
+            else if (opt == 'E/O') {
+                if (num % 2 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='green'>Even</font>"
+                }
+                else if (num % 2 != 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='red'>Odd</font>"
+                }
+            }
+            else if (opt == 'Divi') {
+                if (num % 3 == 0 && num % 5 == 0 && num % 7 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='red'>Divisible by all 3, 5 and 7</font>"
+                }
+                else if (num % 3 == 0 && num % 7 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='red'>Divisible by both 3 and 7</font>"
+                }
+                else if (num % 5 == 0 && num % 7 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='red'>Divisible by both 5 and 7</font>"
+                }
+                else if (num % 3 == 0 && num % 5 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='red'>Divisible by both 3 and 5</font>"
+                }
+                else if (num % 3 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='green'>Divisible by only 3</font>"
+                }
+                else if (num % 5 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='green'>Divisible by only 5</font>"
+                }
+                else if (num % 7 == 0) {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='green'>Divisible by only 7</font>"
+                }
+                else {
+                    document.getElementById('ans').innerHTML = "<font size='20px' color='green'>Divisible by none</font>"
+                }
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>

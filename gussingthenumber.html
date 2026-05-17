@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bteal1 {
+        background-color: teal;
+        color: white;
+    }
+
+    .cteal {
+        background-color: white;
+        color: teal;
+    }
+
+    #fo {
+        color: teal;
+        font-size: 60px;
+    }
+
+    input {
+        padding: 30px 50px 20px 20px;
+        /*top-left top-right bottom-right bottom-left*/
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        background-color: teal;
+        border-radius: 50px;
+        padding: 10px;
+    }
+
+    .main {
+        background-color: rgb(104, 228, 228);
+        height: 600px;
+        width: 850px;
+    }
+
+    .display {
+        font-size: 30px;
+    }
+
+    .dis {
+        color: teal;
+    }
+</style>
+
+<body>
+    <center>
+        <h1 class="bteal1">Number Gussing Game</h1>
+        <h2 class="cteal">Try Guessing a Random Number between 1 and 100.</h2>
+        <h2 class="cteal">You have 10 attempts to guess the correct number!!</h2>
+        <div class="main">
+
+            <form action="" name="form1">
+                <b>
+                    <div id="fo">Guess a Number</div>
+                </b>
+                <input type="number" name="" id="no1"><br><br>
+            </form>
+            <button id="no2" onclick="launch()">SUBMIT</button><br><br><br>
+            <div id="previous" class="dis"></div>
+            <div id="left" class="dis"></div>
+            <div class="bteal1">
+                <div id="display" class="bteal1"></div>
+                <div id="guess" class="bteal"></div>
+                <div id="displ"></div>
+            </div>
+
+    </center>
+    </div>
+</body>
+<script>
+    y = Math.floor(Math.random() * 101)
+    console.log(y)
+    count = 1
+    total = 10
+    arr = []
+    left
+    function launch() {
+        x = document.form1.no1.value
+        if (count == 10) {
+            document.getElementById('displ').innerHTML = "YOU EXCEED YOU GIVEN LIMIT";
+            document.getElementById('no1').disabled = true
+            document.getElementById('no2').disabled = true
+        }
+
+        count++;
+        total--;
+        arr.push(x);
+        if (x > y) {
+            document.getElementById('display').innerHTML = "TOO HIGH"
+        }
+        else if (x < y) {
+            document.getElementById('display').innerHTML = "TOO LOW"
+        }
+        else if (x == y) {
+            document.getElementById('display').innerHTML = "YOU GOT IT MAN!!"
+            document.getElementById('guess').innerHTML = "Total Number Of Guesses You Took: " + count
+            document.getElementById('displ').innerHTML = "YOU EXCEED YOU GIVEN LIMIT";
+            document.getElementById('no1').disabled = true
+            document.getElementById('no2').disabled = true
+
+        }
+        document.getElementById('previous').innerHTML = "Previous Guesses: " + arr
+        document.getElementById('left').innerHTML = "NUMBER OF ATTEMPTS LEFT: " + total
+    }
+</script>
+
+</html>

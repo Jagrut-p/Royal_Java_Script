@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter a text: <input name="string1" type="text"><br>
+        Enter the substring to find its index: <input type="text" name="sub" id="">
+        Start: <input type="radio" name="start" value="1" id="">
+        Last: <input type="radio" name="start" value="0" id="">
+        <input type="button" value="Submit" onclick="task()">
+    </form>
+    <p id="display"></p>
+    <script>
+        function task() {
+            str = document.form1.string1.value
+            substr = document.form1.sub.value
+            st = parseInt(document.form1.start.value)
+            if (st == 1) {
+                document.getElementById('display').innerHTML = str.indexOf(substr)
+            }
+            if (st == 0) {
+                document.getElementById('display').innerHTML = str.lastIndexOf(substr)
+            }
+        }
+    </script>
+</body>
+
+</html>

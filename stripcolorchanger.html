@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .st {
+        border: 1px solid black;
+        width: 1340px;
+        height: 70px;
+    }
+
+    #s1 {
+        background-color: teal;
+    }
+
+    #s2 {
+        background-color: blue;
+    }
+
+    #s3 {
+        background-color: lightcoral;
+    }
+
+    #s4 {
+        background-color: lightgreen;
+    }
+
+    #s5 {
+        background-color: lightsalmon;
+    }
+
+    #s6 {
+        background-color: lightsteelblue;
+    }
+
+    #s7 {
+        background-color: lightseagreen;
+    }
+
+    #s8 {
+        background-color: lightgrey;
+    }
+</style>
+
+<body onload="r1()">
+    <div id="s1" class="st"></div>
+    <div id="s2" class="st"></div>
+    <div id="s3" class="st"></div>
+    <div id="s4" class="st"></div>
+    <div id="s5" class="st"></div>
+    <div id="s6" class="st"></div>
+    <div id="s7" class="st"></div>
+    <div id="s8" class="st"></div>
+</body>
+
+<script>
+    function r1()
+    {
+        document.getElementById('s1').style.backgroundColor = 'pink'
+        document.getElementById('s8').style.backgroundColor = 'lightgrey'
+        setTimeout(r2,1000)
+    }
+    function r2()
+    {
+        document.getElementById('s2').style.backgroundColor = 'purple'
+        document.getElementById('s1').style.backgroundColor = 'teal'
+        setTimeout(r3,1000)
+    }
+    function r3()
+    {
+        document.getElementById('s3').style.backgroundColor = 'red'
+        document.getElementById('s2').style.backgroundColor = 'blue'
+        setTimeout(r4,1000)
+    }
+    function r4()
+    {
+        document.getElementById('s4').style.backgroundColor = 'brown'
+        document.getElementById('s3').style.backgroundColor = 'lightcoral'
+        setTimeout(r5,1000)
+    }
+    function r5()
+    {
+        document.getElementById('s5').style.backgroundColor = 'grey'
+        document.getElementById('s4').style.backgroundColor = 'lightgreen'
+        setTimeout(r6,1000)
+    }
+    function r6()
+    {
+        document.getElementById('s6').style.backgroundColor = 'violet'
+        document.getElementById('s5').style.backgroundColor = 'lightsalmon'
+        setTimeout(r7,1000)
+    }
+    function r7()
+    {
+        document.getElementById('s7').style.backgroundColor = 'brown'
+        document.getElementById('s6').style.backgroundColor = 'lightsteelblue'
+        setTimeout(r8,1000)
+    }
+    function r8()
+    {
+        document.getElementById('s8').style.backgroundColor = 'white'
+        document.getElementById('s7').style.backgroundColor = 'lightseagreen'
+        setTimeout(r1,1000)
+    }
+</script>
+
+</html>

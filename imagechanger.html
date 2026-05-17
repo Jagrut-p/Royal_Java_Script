@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    body {
+        background-color: cornsilk;
+    }
+
+    button {
+        background-color: green;
+        border-radius: 10px;
+        color: white;
+        height: 40px;
+        width: 110px;
+        border: 2px solid black gray;
+    }
+
+    img {
+        height: 300px;
+        width: 400px;
+        border: 1px solid black;
+        box-shadow: 5px 5px 5px 5px gray;
+
+    }
+
+    #back {
+        background-color: white;
+        height: 450px;
+        width: 408px;
+        border-radius: 30px;
+        box-shadow: 10px 10px 10px 10px gray;
+        padding: 50px;
+        /*  */
+    }
+
+    .mai {
+        position: absolute;
+        transform: translate(-50%, -50%, );
+        top: 05%;
+        left: 30%;
+    }
+
+    .bt {
+        margin: 30px;
+        margin-left: 170px;
+    }
+</style>
+
+<body>
+    <div class="mai">
+        <div onclick="Change()" id="back">
+            <div>
+                <h1>Languages</h1>
+            </div>
+            <div><br><img id="img1" src="./2.jpg" alt=""></div>
+            <button onclick="Change()" class="bt">Change</button>
+
+        </div>
+    </div>
+
+
+</body>
+<script>
+    count = 0
+    function Change() {
+        img = ["5.png", "3.png", "4.jpg", "2.jpg"]
+        count = Math.floor(Math.random() * 4)
+        x = img[count]
+        document.getElementById('img1').src = x
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="f">
+        <table>
+            <tr>
+                <td>Enter a value :</td>
+                <td><input type="text" name="n"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Arrpush" onclick="arrPush()">
+                    <!-- <input type="button" value="ArrPrnt" onclick="arrPrnt()"> -->
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p id="arrVal"></p>
+    <script>
+        let arr = []
+        function arrPush() {
+
+            let n = document.f.n.value
+            // console.log(n)
+            arr.push(n)
+            console.log(arr)
+            document.getElementById('arrVal').innerHTML = arr
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box1 {
+        height: 300px;
+        width: 300px;
+        border: 1px solid black;
+    }
+
+    #b1 {
+        height: 30px;
+        width: 50px;
+        border: 1px solid red;
+        background-color: red;
+    }
+
+    #b2 {
+        height: 30px;
+        width: 50px;
+        border: 1px solid blue;
+        background-color: blue;
+    }
+
+    #b3 {
+        height: 30px;
+        width: 50px;
+        border: 1px solid green;
+        background-color: green;
+    }
+
+    #b4 {
+        height: 30px;
+        width: 50px;
+        border: 1px solid grey;
+        background-color: grey;
+    }
+
+    #b5 {
+        height: 30px;
+        width: 50px;
+        border: 1px solid teal;
+        background-color: teal;
+    }
+
+    #main {
+        display: flex;
+    }
+</style>
+
+<body>
+    <form action=""></form>
+    <div id="main">
+        <div onmouseenter="select1('red')" class="sel" id="b1" value="red"></div>
+        <div onmouseenter="select1('blue')" class="sel" id="b2" value="blue"></div>
+        <div onmouseenter="select1('green')" class="sel" id="b3" value="green"></div>
+        <div onmouseenter="select1('grey')" class="sel" id="b4" value="grey"></div>
+        <div onmouseenter="select1('teal')" class="sel" id="b5" value="teal"></div>
+    </div>
+    <div id="box1"></div>
+</body>
+<script>
+    function select1(x) {
+        if (x == 'red') {
+            document.getElementById('box1').style.backgroundColor = 'red'
+        }
+        if (x == 'green') {
+            document.getElementById('box1').style.backgroundColor = 'green'
+        } if (x == 'grey') {
+            document.getElementById('box1').style.backgroundColor = 'grey'
+        } if (x == 'teal') {
+            document.getElementById('box1').style.backgroundColor = 'teal'
+        } if (x == 'blue') {
+            document.getElementById('box1').style.backgroundColor = 'blue'
+        }
+    }
+</script>
+
+</html>

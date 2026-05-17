@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .background {
+        background-color: #efddc7;
+        width: 50%;
+        height: 680px;
+        padding-bottom: 30px;
+        justify-self: center;
+        align-items: center;
+        padding-left: 30px;
+        border-radius: 10px;
+    }
+
+    input[type=text] {
+        padding: 8px;
+        padding-right: 30px;
+    }
+
+    .address1 input[type="text"] {
+        width: 90%;
+    }
+
+    input[type="text"] {
+        border: 1px solid #846553;
+    }
+
+    .fifty input[type="text"] {
+        width: 35%;
+    }
+
+    .space {
+        justify-content: space-between;
+    }
+
+    input[type="text"] :placeholder-shown {
+        color: red;
+    }
+
+    .head {
+        font-weight: 900;
+    }
+
+    input[type="text"] {
+        margin-right: 20px;
+        background-color: rgb(253, 246, 236);
+        border-radius: 5px;
+    }
+
+    body {
+        background-color: rgb(253, 246, 236);
+    }
+
+    input[type="button"] {
+        background-color: rgb(253, 246, 236);
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #846553;
+        color: #f7eff3;
+    }
+
+    .op {
+        font-size: 19px;
+    }
+    .main{
+        background-image: url(./1000_F_216635784_6fFPvOUIZANOmeL7M2RIDjn00WjHAci6.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+    /* .val{
+        font-weight: 700;
+    } */
+</style>
+
+<body>
+    <div class="main">
+    <form action="" name="form1">
+        <div class="background">
+            <br>
+            <div class="head">
+                <center>
+                    <h2>Bistro Mini-Cake Order Form</h2>
+                </center>
+            </div>
+            <div class="address1"><input width="90%" type="text" name="ad1" placeholder="Street Address"></div>
+            <br>
+            <div class="address1"><input type="text" name="ad2" id="" placeholder="Street Address 2"></div>
+            <br>
+            <div class="space">
+                <div class="fifty"><input type="text" placeholder="City" name="city" id=""><input placeholder="Region"
+                        type="text" name="region" id="">
+                </div>
+                <br>
+                <div class="fifty"><input type="text" name="zip" placeholder="Postal/Zip Code"><input name="rom"
+                        type="text" placeholder="Romania"></div><br>
+            </div>
+            <div class="check head"><input type="checkbox" name="cakeserve" id=""> I will serve the cake on the spot
+            </div>
+            <br>
+            <div class="address1 head">Table Number: <br><input type="text" name="tbno"></div><br>
+            <div class="op head">Best option for you:</div><br>
+            <div class="val">
+                <input type="radio" value="Wild Berry Cakes" name="fica" id="">Wild Berry Cakes
+                <input type="radio" name="fica" value="Chocolate, Vanilla and Caramel Cake" id=""> Chocolate, Vanilla and Caramel Cake
+                <input type="radio" name="fica" value="Tiramisu" id="">Tiramisu
+            </div>
+            <br>
+            <div class="val">
+                <input type="radio" name="fica" value="Carrot and Pumpkin Cake" id="">Carrot and Pumpkin Cake
+                <input type="radio" name="fica" value="Cheesecake with Raspberry" id="">Cheesecake with Raspberry
+                <input type="radio" name="fica" value="Amandina Cake" id="">Amandina Cake
+            </div>
+            <br>
+            <div class="op head">Best row option for you: </div><br>
+            <div class="val">
+                <input type="radio" name="seca" value="Wild Berry Cake - raw" id="">Wild Berry Cake - raw
+                <input type="radio" name="seca" value="Pear, Banana and Pinepapple Cake - raw" id="">Pear, Banana and Pinepapple Cake - raw
+                <input type="radio" name="seca" value="Mango & Vanilla Cake - raw" id="">Mango & Vanilla Cake - raw
+            </div>
+            <br>
+            <div class="val">
+                <input type="radio" value="Amoraws Cake - raw" name="seca" id="">Amoraws Cake - raw
+                <input type="radio" value="Chocolate Cake - raw" name="seca">Chocolate Cake - raw
+                <input type="radio" value="Cocoa and Mint Cake - raw" name="seca" id="">Cocoa and Mint Cake - raw
+            </div><br><br>
+            <center>
+                <div class="submit"><input type="button" value="Place Order" onclick="order()" name="" id=""></div>
+            </center>
+        </div>
+    </form>
+    </div>
+    <br>
+    <center>
+        <div id="tabale"></div>
+    </center>
+    <script>
+        function order() {
+            let css1, i, order = "", data = "";
+            let add1 = "", add2 = "", ci = "", re = "", zip1, romania = "", serve, tabno, fiop = "", seop = "";
+            add1 = document.form1.ad1.value
+            add2 = document.form1.ad2.value
+            ci = document.form1.city.value
+            re = document.form1.region.value
+            zip1 = document.form1.zip.value
+            romania = document.form1.rom.value
+            serve = document.form1.cakeserve.value
+            tabno = document.form1.tbno.value
+            fiop = document.form1.fica.value
+            seop = document.form1.seca.value
+            // for (i = 0; i < document.form1.fica.length; i++) {
+            //     x = 
+            //     if (x == "wb") {
+            //         order += "Wild Berry Cake"
+            //     }
+            //     else if (x == "cvc") {
+            //         order += "Chocolate, Vanilla and Caramel Cake"
+            //     }
+            //     else if (x == "tu") {
+            //         order += "Tiramisu"
+            //     }
+            //     else if (x == "cap") {
+            //         order += "Carrot and Pumpkin Cake"
+            //     }
+            //     else if (x == "car") {
+            //         order += "Cheesecake with Raspberry"
+            //     }
+            //     else if (x == "ac") {
+            //         order += "Amandina Cake"
+            //     }
+            // }
+            data = "<table border = 1px solid black>";
+            data += "<tr><td>Address1: </td><td>" + add1 + "</td></tr>";
+            data += "<tr><td>Address2: </td><td>" + add2 + "</td></tr>";
+            data += "<tr><td>City: </td><td>" + ci + "</td></tr>";
+            data += "<tr><td>Region: </td><td>" + re + "</td></tr>";
+            data += "<tr><td>Zip-Code: </td><td>" + zip1 + "</td></tr>";
+            data += "<tr><td>Romania: </td><td>" + romania + "</td></tr>";
+            if (serve == true) {
+                data += "<tr><td>On-Site: </td><td>Yes</td></tr>";
+            }
+            else {
+                data += "<tr><td>On-Site: </td><td>No</td></tr>"
+            }
+            data += "<tr><td>Cake Order: </td><td>" + fiop + "</td></tr>";
+            data += "<tr><td>Raw Cake Order: </td><td>" + seop + "</td></tr>";
+            document.getElementById('tabale').innerHTML = data;
+        }
+    </script>
+</body>
+
+</html>

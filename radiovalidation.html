@@ -1,0 +1,243 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span {
+        color: red;
+    }
+</style>
+
+<body>
+    <table border="1px solid black">
+        <form action="" name="form1">
+            <tr>
+                <td>First Name: <input type="text" name="fn" id=""><span id="errfn"></span><br></td>
+            </tr>
+            <tr>
+                <td>Last Name: <input type="text" id="ln"><span id="errln"></span></td>
+            </tr>
+            <tr>
+                <td>Email: <input type="text" id="ma"><span id="errma"></span></td>
+            </tr>
+            <tr>
+                <td>Zip Code: <input type="text" name="zc" id="zc"><span id="errzip"></span>
+                </td>
+            </tr>
+            <tr>
+                <td> Gender: Male <input type="radio" value="male" name="gen" id=""> Female <input type="radio"
+                        name="gen" value="Female" id=""> <span id="errgen"></span><br></td>
+            </tr>
+            <tr>
+                <td> Hobby:
+                    Sports: <input value="sports" name="hy" type="checkbox"> <br>
+                    Signing <input value="singing" name="hy" type="checkbox"> <br>
+                    Coding:<input name="hy" value="coding" type="checkbox">
+                    <span id="errhy"></span> <br>
+                </td>
+            </tr>
+            </td>
+            </tr>
+            <tr>
+                <td> Contact: <input type="text" name="phone"><span id="errph"></span><br></td>
+            </tr>
+            <tr>
+                <td> Password: <input type="password" name="pass" id=""><span id="erpass"></span><br></td>
+            </tr>
+            <tr>
+                <td> Coniform Password: <input type="password" name="cpass"><span id="errrpass"></span><span
+                        id="errpass"></span><br></td>
+            </tr>
+            <tr>
+                <td> Nationality: <select name="list" id="">
+                        <option value="0">----Select----</option>
+                        <option value="us">USA</option>
+                        <option value="in">India</option>
+                        <option value="Ru">Russia</option>
+                        <option value="Ch">China</option>
+                    </select><span id="errli"></span><br></td>
+            </tr>
+            <tr>
+                <td> <input type="button" value="Submit" onclick="action1()"></td>
+            </tr>
+    </table>
+    <div id="display"></div>
+    </form>
+</body>
+<script>
+    function action1() {
+        let textonly = /^[a-zA-Z]+$/
+        let contactonly = /^[0-9]{10}$/
+        let zponly = /^[0-9]{6}$/
+        let numonly = /^[0-9]+$/
+        let emailonly = /[a-zA-Z]+@[a-zA-Z]+\.[A-Za-z]+[a-zA-Z]+/
+        let onlyPwd = /^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})/
+        let count = 0, ctr = 0;
+        let err = false
+        let hoyd = ""
+        let print = ""
+        x = document.form1.fn.value;
+        z = document.form1.zc.value;
+        w = document.form1.ln.value;
+        console.log(z)
+        if (x.trim().length == 0) {
+            document.getElementById('errfn').innerHTML = "<font color='red'> *Enter a your correct name</font>"
+            err = true
+        }
+        else if (textonly.test(x) == false) {
+            document.getElementById('errfn').innerHTML = "<font color='red'> *Enter only alphabets</font>"
+            err = true
+        }
+        else {
+            print += "<table border = 1px solid black><tr><td>" + x + "</td></tr>"
+        }
+        console.log(w)
+        if (w.trim().length == 0) {
+            document.getElementById('errln').innerHTML = "<font color='red'> *Enter a your correct name</font>"
+            err = true
+        }
+        else if (textonly.test(w) == false) {
+            document.getElementById('errln').innerHTML = "<font color='red'> *Enter only alphabets</font>"
+            err = true
+        }
+        else {
+            document.getElementById('errln').innerHTML = ""
+            print += "<tr><td>" + w + "</td></tr>"
+            err = false
+        }
+
+        ma = document.form1.ma.value
+        if (ma.trim().length == 0) {
+            document.getElementById('errma').innerHTML = "* Enter a MAIL ID"
+            err = true
+
+        }
+        else if (!emailonly.test(ma)) {
+            document.getElementById('errma').innerHTML = "* Enter a correct mail"
+            err = true
+
+        }
+         else {
+            print += "<tr><td>" + ma + "</td></tr>"
+        }
+        let mna = true
+        let gend = document.form1.gen
+        for (let i = 0; i < gend.length; i++) {
+            if (gend[i].checked) {
+                count++;
+                mna = false
+            }
+        }
+        if(mna = true)
+        {
+            gender = document.form1.gen.value
+            print += "<tr><td>" + gender + "</td></tr>"
+        }
+        if (count == 0) {
+            document.getElementById('errgen').innerHTML = "<font color='red'> *Enter a valid input</font>"
+            err = true
+
+        }
+        else {
+            print += "<tr><td>" + gend + "</td></tr>"
+        }
+        for (i = 0; i < document.form1.hy.length; i++) {
+            if (document.form1.hy[i].checked) {
+                ctr++;
+            }
+        }
+        for(i=0;i<hy[i].length;i++)
+        {
+            let co = document.form1.hy[i].value
+        }
+        let ho = document.form1.hy.value
+        if (ctr == 0) {
+            document.getElementById('errhy').innerHTML = "<font color='red'> *Enter a valid input</font>"
+            err = true
+
+        }
+        else {
+            hoob = document.form1.hy.value
+            print += "<tr><td>" + co + "</td></tr>"
+        }
+                /*
+        if (document.form1.phone.value.length == "") {
+            document.getElementById('errph').innerHTML = "<font color='red'> *Enter  a valid phone number</font>"
+        }
+        
+        else if(numonly.test(document.form1.phone.value)==false)
+        {
+            document.getElementById('errph').innerHTML = "<font color='red'> *Enter correct values</font>"
+
+        }
+        else if (document.form1.phone.value.length != 10) {
+            document.getElementById('errph').innerHTML = "<font color='red'> *Enter at leat 10 digits</font>"
+        }
+        else {
+            document.getElementById('errph').innerHTML = " "
+        }
+            */
+        if (!contactonly.test(document.form1.phone.value)) {
+            document.getElementById('errph').innerHTML = "*Enter digits only atleast 10 numbers"
+            err = true
+        }
+        else 
+        {
+            print += "<tr><td>" + document.form1.phone.value + "</td></tr>"
+        }
+
+        if (!onlyPwd.test(document.form1.pass.value)) {
+            document.getElementById('erpass').innerHTML = " *Enter a valid Password which matches the requirements"
+            err = true
+
+        }
+        else if (document.form1.pass.value != document.form1.cpass.value) {
+            err = true
+            document.getElementById('errpass').innerHTML = "<font color='red'> *Password does't match</font>"
+        }
+        else if (document.form1.pass.value == "") {
+            err = true
+            document.getElementById('erpass').innerHTML = "<font color='red'> *Enter a valid Password</font>"
+        }
+        else if (document.form1.cpass.value == "") {
+            err = true
+            document.getElementById('errrpass').innerHTML = " *Enter a valid Password"
+        }
+
+        else {
+            document.getElementById('errpass').innerHTML = ""
+            print += "<tr><td>" + document.form1.pass.value + "</td></tr>"
+        }
+
+        if (document.form1.list.value == 0) {
+            err = true
+            document.getElementById('errli').innerHTML = "<font color='red'> *Enter a valid nationality</font>"
+        }
+        else {
+            hoyd = document.form1.list.value
+            document.getElementById('errli').innerHTML = ""
+            print += "<tr><td>" + hoyd + "</td></tr>"
+
+        }
+        if (z.trim().length == 0) {
+            document.getElementById('errzip').innerHTML = "* Enter SOMEthing"
+            err = true
+        }
+        else if (!zponly.test(z)) {
+            err = true
+            document.getElementById('errzip').innerHTML = "* Enter a correct pin code"
+        }
+        else {
+            document.getElementById('errzip').innerHTML = " "
+            print += "<tr><td>" + z + "</td></tr>"
+        }
+        if (!err) {
+            document.getElementById('display').innerHTML = print
+        }
+    }
+</script>
+
+</html>

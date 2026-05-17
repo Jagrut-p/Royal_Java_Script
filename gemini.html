@@ -1,0 +1,113 @@
+<style>
+    :root {
+        --brown: #846553;
+        --cream: #efddc7;
+    }
+
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fdf6ed; }
+
+    .background {
+        background-color: var(--cream);
+        width: 100%;
+        max-width: 500px; /* Better than 50% for mobile */
+        margin: 20px auto;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding-left: 100px;
+    }
+
+    .input-group { margin-bottom: 15px; }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--brown);
+        border-radius: 4px;
+        box-sizing: border-box; /* Critical for padding! */
+    }
+
+    .flex-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .cake-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns for cakes */
+        gap: 10px;
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+
+    button {
+        background-color: var(--brown);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    button:hover { opacity: 0.9; }
+    
+    #summary { margin-top: 20px; padding: 15px; background: #fff; border-radius: 5px; }
+</style>
+
+<body>
+    <div class="background">
+        <h2>Bistro Mini-Cake Order</h2>
+        <form id="cakeForm">
+            <div class="input-group">
+                <input type="text" name="ad1" placeholder="Street Address">
+            </div>
+            <div class="flex-row">
+                <input type="text" name="city" placeholder="City">
+                <input type="text" name="zip" placeholder="Zip Code">
+            </div>
+
+            <div class="input-group">
+                <label><input type="checkbox" name="cakeserve"> Serving on spot?</label>
+            </div>
+
+            <div class="input-group">
+                <strong>Select your Cake:</strong>
+                <div class="cake-options">
+                    <label><input type="radio" name="fica" value="Wild Berry"> Wild Berry</label>
+                    <label><input type="radio" name="fica" value="Tiramisu"> Tiramisu</label>
+                    <label><input type="radio" name="fica" value="Amandina"> Amandina</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="processOrder()">Place Order</button>
+        </form>
+
+        <div id="summary" style="display:none;">
+            <h3>Order Summary</h3>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        function processOrder() {
+            const form = document.getElementById('cakeForm');
+            const data = new FormData(form);
+            
+            // Accessing data easily
+            let address = data.get('ad1');
+            let city = data.get('city');
+            let cake = data.get('fica') || "None selected";
+            let onSpot = form.elements['cakeserve'].checked ? "Yes" : "No";
+
+            document.getElementById('summary').style.display = 'block';
+            document.getElementById('result').innerHTML = `
+                <b>Address:</b> ${address}, ${city}<br>
+                <b>Cake:</b> ${cake}<br>
+                <b>On-site:</b> ${onSpot}
+            `;
+        }
+    </script>
+</body>

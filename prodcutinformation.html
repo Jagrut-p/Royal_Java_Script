@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+    }
+    td{
+        height: 30px;
+    }
+    .sub{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="main">
+    <center>
+        <h1>Product Information Form</h1>
+        <form action="" name="form1" >
+            <table class="tablet">
+
+                <tr>
+                    <td>
+                        <div>Product Name: </td><td><input type="text" name="pronam" id=""></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Price($): </td><td><input type="text" name="pri" id=""></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Category</td><td>
+                        <select name="cate" id="">
+                            <option value="">------Select-----</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Automobile">Automobile</option>
+                        </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Product Condition: </td><td><input type="radio" name="condition" value="New" id="">New
+                            <input type="radio" name="condition" value="Used" id="">Used
+                        </div>
+                <tr>
+                    <td>
+                        <div>Features:</td><td>
+                            <div class="teb">
+                                <table>
+                                    <tr>
+                                        <td><input type="checkbox" value="warr" name="checkb" id="">Warrenty<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="checkb" value="ship" id="">Free Shipping<br>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="checkb" value="dis" id="">Discont Available<br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Description:</td><td> <textarea name="discript" id=""></textarea></div><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>Upload Image: </td><td><input type="file" name="file" id=""></div><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="sub"><input type="button" value="Submit Product" onclick="prodcut()" name="" id=""></div>
+                    </td>
+                </tr>
+    </center>
+    </table>
+    </div>
+    </form>
+    <center>
+    <div id="output"></div>
+    <div id="pro"></div>
+    <div id="pr"></div>
+    <div id="categ"></div>
+    <div id="conit"></div>
+    <div id="produ"></div>
+    <div id="feat"></div>
+    <div id="disci"></div>
+    <div id="image"></div>
+    </center>
+    <script>
+        let data;
+        function prodcut() {
+            let x, data = "", out = "";
+            pro = document.form1.pronam.value
+            price = document.form1.pri.value
+            cate = document.form1.cate.value
+            cond = document.form1.condition.value
+            for (let i = 0; i < document.form1.checkb.length; i++) {
+                if (document.form1.checkb[i].checked) {
+                    val = document.form1.checkb[i].value
+                    if (val == "warr") {
+                        data += "Warranty"
+                    }
+                    else if (val == "ship") {
+                        data += " Shipping"
+                    }
+                    else if (val == "dis") {
+                        data += " Discount"
+                    }
+                }
+            }
+            discr = document.form1.discript.value
+            img = document.form1.file.value
+            out += "<table border = 1px solid black>"
+            out += "<tr><td>Product Name: " + pro + "</tr></td>"
+            out += "<tr><td>Price: " + price + "</tr></td>"
+            out += "<tr><td>Category: " + cate + "</tr></td>"
+            out += "<tr><td>Condition: " + cond + "</tr></td>"
+            out += "<tr><td>Features: " + data + "</tr></td>"
+            out += "<tr><td>Discription:" + discr + "</tr></td>"
+            out += "<tr><td>Image:" + img + "</tr></td></table>"
+            document.getElementById('output').innerHTML = out;
+        }
+    </script>
+</body>
+
+</html>

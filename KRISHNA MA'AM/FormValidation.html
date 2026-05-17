@@ -1,0 +1,175 @@
+<html></html>
+<head>
+    <title>form validation</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form name="f">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="fn" id="fn">
+                    <!-- <p>First name is Required</p> -->
+                     <!-- <div>First name is Required</div> -->
+                      <!-- <h3>First name is Required</h3> -->
+                       <span id="errFn"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="ln" id="ln"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="g">Male
+                    <input type="radio" name="g">Female
+                    <span id="errGen"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Contact Number</td>
+                <td><input type="text" name="cn">
+                <span id="errCn"></span>
+            </td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <td><input type="checkbox" name="h"> Sports
+                    <input type="checkbox" name="h"> Singing <br>
+                    <input type="checkbox" name="h"> Music
+                    <input type="checkbox" name="h"> Drawing
+                    <span id="errHby"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Nationality</td>
+                <td>
+                    <Select name="na">
+                        <option value="0">---- Select ----</option>
+                        <option value="in">India</option>
+                        <option value="us">USA</option>
+                        <option value="ca">Canada</option>
+                        <option value="ua">UAE</option>
+
+                    </Select>
+                    <span id="errNa"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Submit" onclick="validate()"></td>
+            </tr>
+         
+        </table>
+    </form>
+    <script>
+        function validate(){
+            console.log("validation")
+            
+            let fn = document.f.fn.value
+            let ln = document.f.ln.value
+
+            // let fn = document.getElementById('fn').value 
+            console.log(fn)
+            let isErr = false
+            let errMsg = ""
+            let textOnly = /^[a-zA-Z]+$/
+            // only alphabates allowed
+
+            let digitsOnly = /^[0-9]+$/
+            // only digits are allowed [no alphabates / no special sumbol]
+
+            if(fn == "" || fn.trim().length == 0){
+                // alert("First Name is Required")
+                // isErr = true
+                // errMsg += "First name is Required"
+                document.getElementById('errFn').innerHTML  = "* First Name is Required"
+            }
+            else if(textOnly.test(fn)==false){
+                document.getElementById('errFn').innerHTML  = "* Only Text"
+
+            }
+            else{
+                document.getElementById('errFn').innerHTML  = " "
+
+            }
+            if(ln == "" || ln.trim().length == 0){
+                // alert("Last Name is Required")
+                // isErr = true
+                // errMsg += "\nLast name is Required"
+            }
+
+
+            // contact no
+            let cn = document.f.cn.value 
+            
+
+            if(cn.trim().length == 0){
+                document.getElementById('errCn').innerHTML = "* Contact number is Required"
+            }
+            else if(!digitsOnly.test(cn)){
+                document.getElementById('errCn').innerHTML = " * Only Digits"
+            }
+            else{
+                document.getElementById('errCn').innerHTML = " "
+            }
+            //Gender
+
+            let cntr = 0 
+            for(let i = 0 ;i<document.f.g.length;i++){
+                if(document.f.g[i].checked){
+                    cntr++
+                }
+            }
+            if(cntr==0){
+                document.getElementById('errGen').innerHTML = "* Gender is Required"
+            }
+            else{
+                document.getElementById('errGen').innerHTML = ""
+
+            }
+
+            //checkbox
+            let cnt = 0 
+            for(let i = 0 ;i<document.f.h.length;i++){
+                if(document.f.h[i].checked){
+                    cnt++
+                }
+            }
+
+
+            if(cnt==0){
+                document.getElementById('errHby').innerHTML = "* Hobby is Required"
+            }
+            else{
+                document.getElementById('errHby').innerHTML = ""
+
+            }
+
+            let na = document.f.na.value
+            console.log(na)
+            
+            if(na == "0" ){
+                document.getElementById('errNa').innerHTML = " * Nationality is Required."
+            }
+            else{
+                document.getElementById('errNa').innerHTML = " "
+            }
+
+            // if(isErr){
+            //     alert(errMsg)
+            // }
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    contact no : 10 digits 
+    password 
+    confirm password should be same
+
+
+-->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        <table>
+            <tr>
+                <td>Enter n number to find maximum out of it: <input type="text" name="no" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Add Number" name="" onclick="ar()" id=""></td>
+                <td><input type="button" value="maximum" onclick="ma()"></td>
+            </tr>
+        </table>
+    </form>
+    <p id="max"></p>
+    <p id="arr"></p>
+    <script>
+        let arr = []
+        function ar() {
+            no = document.form1.no.value
+            arr.push(no)
+            document.getElementById('arr').innerHTML = arr
+         }
+         function ma()
+         {
+            let y = arr[0]
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] > y) {
+                    y = arr[i]
+                }
+            }
+            document.getElementById('max').innerHTML = y
+         }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter numbers of array 1: <input name="no1" type="text">
+        Enter numbers of array 2: <input name="no2" type="text">
+        <input type="button" value="push" onclick="array()">
+        <input type="button" value="Sum" onclick="sum1()">
+    </form>
+
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+
+    <script>
+        let ano1 = [], ano2 = [];
+        function array() {
+
+            no1 = parseInt(document.form1.no1.value)
+            no2 = parseInt(document.form1.no2.value)
+            ano1.push(no1)
+            ano2.push(no2)
+            document.getElementById('display1').innerHTML = ano1
+            document.getElementById('display2').innerHTML = ano2
+
+        }
+        let suma1 = []
+        function sum1() {
+            for (i = 0; i < ano1.length; i++) {
+                suma1[i] = ano1[i] + ano2[i]
+            }
+            document.getElementById('display3').innerHTML = suma1
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #box1 {
+        border: 1px solid black;
+        width: 400px;
+        height: 400px;
+    }
+</style>
+
+<body>
+    <div id="box1" onmousemove="mouse1()"></div>
+</body>
+<script>
+    function mouse1() {
+        arr = ["Yellow","Green","Black","Purple","Ten","teal",'gold','white','lightgreen','black'] 
+        x = Math.floor(Math.random() * 10)
+        console.log(x)
+        console.log(arr[x])
+        document.getElementById('box1').style.backgroundColor = arr[x]
+    }
+</script>
+
+</html>

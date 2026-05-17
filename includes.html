@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter the string: <input type="text" name="stri">
+        Enter the substring to check weather there or not: <input type="text" name="substri">
+    </form>
+    <script>
+        function subst() {
+            x = document.form1.stri.value
+            y = document.form1.substri.value
+            if (x.includes(y)) {
+                document.getElementById('display').innerHTML = "Present"
+            }
+            else {
+                document.getElementById('display').innerHTML = "Not Present"
+            }
+        }
+    </script>
+</body>
+
+</html>

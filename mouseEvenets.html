@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <button onmouseenter="mouseenter()">Mouse Enter</button>
+        <button onmouseleave="mouseleave()">Mouse Leave</button>
+        <button onmouseover="mouseover()">Mouse Over</button>
+        <button onmouseout="mouseout()">Mouse Out</button>
+        <button ondblclick="doubleclick()">Mouse Double Click</button>
+        <button onclick="onclik()">On Click</button>
+    </body>
+    <script>
+        function mouseenter()
+        {
+            document.body.bgColor = 'blue';
+        }
+        function mouseleave()
+        {
+            document.body.bgColor = 'white'
+            
+        }
+        function mouseover()
+        {
+            document.body.bgColor = 'Green'
+        }
+        function mouseout()
+        {
+            document.body.bgColor = 'violet'
+        }
+        function doubleclick()
+        {
+            document.body.bgColor = 'yellow'
+        }
+        function onclik()
+        {
+            document.body.bgColor = 'lightgreen'
+        }
+    </script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        background-color: seagreen;
+        width: 100px;
+        height: 40px;
+        border-radius: 30px;
+    }
+    body{
+        background-color: black;
+    }
+    #main{
+        text-align: center;
+        
+
+    }
+    p,h1{
+        color: white;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div id="main">
+<h1>Vote for your Language 👩‍💻</h1>
+        <button onclick="lanch('p')" name="but" value="p">Python</button>
+        <button onclick="lanch('j')" name="but" value="j">Java</button>
+        <button onclick="lanch('c')" name="but" value="c">C++</button>
+        <button onclick="lanch('s')" name="but" value="s">SQL</button>
+    <p>Python: <span id="dp"></span></p>
+    <p>C++: <span id="dc"></span></p>
+    <p>Java: <span id="dj"></span></p>
+    <p>SQL: <span id="ds"></span></p>
+    </div>
+</body>
+<script>
+        count = [0,0,0,0]
+    function lanch(x) {
+        if (x == 'p') {
+            count[0]++;
+            console.log(count[0])
+            document.getElementById('dp').innerHTML = count[0];
+        }
+        else if (x == 'c') {
+            count[1]++
+            console.log(count[1])
+            document.getElementById('dc').innerHTML = count[1]
+        }
+        else if (x == 's') {
+            count[2]++;
+            document.getElementById('ds').innerHTML = count[2]
+        }
+        else if (x == 'j') {
+            count[3]++
+            document.getElementById('dj').innerHTML = count[3]
+        }
+    }
+
+</script>
+
+</html>

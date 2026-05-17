@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter a text: <input name="string1" type="text"><br><br>
+        Enter the substring to find if its there: <input type="text" name="sub" id=""><br>
+        <input type="button" value="Submit" onclick="task()">
+    </form>
+    <p id="display"></p>
+    <script>
+        function task() {
+            str = parseInt(document.form1.string1.value)
+            substr = parseInt(document.form1.sub.value)
+            if (str.includes(substr)) {
+                document.getElementById('display').innerHTML = "It is present"
+            }
+            else {
+                document.getElementById('display').innerHTML = "It is not present"
+            }
+        }
+    </script>
+</body>
+
+</html>

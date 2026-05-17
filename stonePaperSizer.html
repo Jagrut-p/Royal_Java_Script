@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #display {
+        width: 200px;
+        height: 30px;
+        font-size: 40px;
+    }
+
+    #img1 {
+        border: 1px solid black;
+        height: 200px;
+        width: 200px;
+    }
+    .dis{
+        font-size: 30px;
+    }
+    #head1{
+        background-color: darkblue;
+        height: 30px;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+    }
+</style>
+
+<body>
+    <center id="head1"><h3>Rock Paper Scissors</h3></center>
+    <br><br>
+    <center>
+        <img onclick="launch('paper')" id="img1" src="./WhatsApp Image 2026-05-17 at 2.28.22 PM (1).jpeg" alt="">
+        <img onclick="launch('rock')" id="img1" src="./WhatsApp Image 2026-05-17 at 2.28.22 PM.jpeg" alt="">
+        <img onclick="launch('sezier')" id="img1" src="./WhatsApp Image 2026-05-17 at 2.28.23 PM.jpeg" alt="">
+<br><br>
+        <div class="dis" id="display"></div><br><br><br><br><br><br>
+        <span class="dis" id="computer">Computer: </span>
+        <span class="dis" id="user">User: </span>
+    </center>
+</body>
+<script>
+
+</script>
+<script>
+    let x = Math.floor(Math.random() * 3)
+    let arr = ['rock', 'paper', 'sezier']
+    let w = 0
+    let c = 0
+    function launch(y) {
+        if (y == arr[x]) {
+            document.getElementById('display').innerHTML = "It's a draw"
+        }
+        else if (y == 'rock' && arr[x] == 'paper') {
+            document.getElementById('display').innerHTML = "You Lose"
+            c++;
+        }
+        else if (y == 'paper' && arr[x] == 'sezier') {
+            document.getElementById('display').innerHTML = "You Lose"
+            c++;
+        }
+        else if (y == 'sizer' && arr[x] == 'rock') {
+            document.getElementById('display').innerHTML = "You Lose"
+            c++;
+        }
+        else {
+            document.getElementById('display').innerHTML = "You Win"
+            w++;
+
+        }
+        console.log(arr[x])
+        document.getElementById('computer').innerHTML = "Computer: " + c
+        document.getElementById('user').innerHTML = "User: " + w
+    }
+</script>
+
+</html>

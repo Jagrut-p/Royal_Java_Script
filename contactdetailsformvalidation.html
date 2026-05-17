@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+    <table>
+        <tr>
+            <td><b><u>F</u></b>irst Name*: <input type="text" id="fn"></td>
+        </tr>
+        <tr>
+            <td><b><u>L</u></b>ast Name*: <input type="text" name="" id="ln"></td>
+        </tr>
+        <tr>
+            <td>Street <b><u>a</u></b>ddress: <input type="text" id="sa"></td>
+        </tr>
+        <tr>
+            <td><b><u>T</u></b>own: <input type="text" id="tn"></td>
+        </tr>
+        <tr>
+            <td>Post<b><u>C</u></b>ode: <input type="text" id="pc"></td>
+        </tr>
+        <tr>
+            <td>Tele<b><u>p</u></b>hone: <input type="text" id="te"></td>
+        </tr>
+        <tr>
+            <td><b><u>M</u></b>obile: <input type="text" id="me"></td>
+        </tr>
+        <tr>
+            <td><b><u>E</u></b>mail Address*: <input type="text" id="ea"></td>
+        </tr>
+        <tr>
+            <td><center><input type="button" value="Submit" onclick="start()"></center></td>
+        </tr>
+        <tr><td><center><font color="red">Field marked * are required!</font></center></td></tr>
+    </table>
+    </form>
+</body>
+<script>
+    function start()
+    {   
+       fn = document.form1.fn.value
+       ln =  document.form1.ln.value
+       sa =  document.form1.sa.value
+    }
+</script>
+</html>

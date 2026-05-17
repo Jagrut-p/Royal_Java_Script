@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+        <table>
+            <tr>
+                <td><input type="text" name="no" id=""></td>
+            </tr>
+            <tr>
+                <td >Push <input type="radio" value="push" name="op" id=""></td>
+                <td>Pop <input type="radio" name="op" value="pop" id=""></td>
+                <td>Shift <input type="radio" name="op" value="shift" id=""></td>
+                <td>Unshift <input type="radio" name="op" value="unshift" id=""></td>
+            </tr>
+            <tr>
+                <td><input type="button" type="submit" onclick="sub()" value="Submit" name="" id=""></td>
+            </tr>
+        </table>
+    </form>
+    <p id="print"></p>
+    <script>
+        let arr = []
+        function sub()
+        {
+            no = document.form1.no.value
+            x = document.form1.op.value
+            if(x == 'push')
+        {
+            arr.push(no)
+            print()
+        }
+        else if(x == 'pop')
+        {
+            arr.pop()
+            print()
+        }
+        else if(x == 'shift')
+        {
+            arr.shift()
+            print()
+        }
+        else if(x== 'unshift')
+        {
+            arr.unshift(no)
+            print()
+        }
+        }
+        function print()
+        {
+            document.getElementById('print').innerHTML = arr
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter element of array 1: <input type="text" name="array">
+        <input type="button" value="Push" onclick="arr12()">
+        <input type="button" value="Reverse" onclick="reverse()">
+    </form>
+    <p id="display"></p>
+    <p id="reverse"></p>
+    <script>
+        let arr = []
+        function arr12() {
+            x = document.form1.array.value
+            arr.push(x)
+        }
+        function reverse() {
+            for (i = arr.length; i > 0; i--) {
+                document.getElementById('reverse').innerHTML = arr[i]
+            }
+        }
+    </script>
+</body>
+
+</html>

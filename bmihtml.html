@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form1">
+        <br>
+        Height: <br> <input id="h" type="text"><br>
+        Weight: <br><input id="w" type="text">
+        <div id="display"></div>
+    </form>
+    <button onclick="laucnh()">Calculate BMI</button>
+</body>
+<script>
+    function laucnh() {
+        he = document.form1.h.value
+        we = document.form1.w.value
+        total = (we / (he * he))
+        console.log(total)
+    }
+</script>
+
+</html>

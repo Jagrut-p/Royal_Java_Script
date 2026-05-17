@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="color()">
+    <!-- event : onload  [while page load into browser] -->
+    <script>
+        function color(){
+            document.body.bgColor = 'orange'
+            console.log('Orange')
+            // salmon()
+            setTimeout(salmon,1000)
+        }
+        // color()
+        function salmon(){
+            document.body.bgColor = 'salmon'
+            console.log('salmon')
+            setTimeout(gold,1000)
+        }
+
+        function gold(){
+            document.body.bgColor = 'gold'
+            console.log('gold')
+            setTimeout(lightBlue,1000)
+        }
+
+        function lightBlue(){
+            document.body.bgColor = 'lightblue'
+            console.log('lightblue')
+            setTimeout(color,1000)
+        }
+    </script>
+</body>
+</html>
+

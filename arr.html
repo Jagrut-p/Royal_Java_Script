@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+        <table>
+            <tr>
+                <td>Enter a number: <input type="text" name="no"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="func()" value="Submit" name="" id=""></td>
+                <td><input type="button" value="pop" onclick="pop()" name="" id=""></td>
+            </tr>
+        </table>
+    </form>
+    <p id="print"></p>
+    <script>
+        let arr = []
+        function func()
+        {
+            let x;
+            x = document.form1.no.value
+            arr.push(x)
+            print()
+            }
+            function print()
+            {
+            document.getElementById('print').innerHTML = arr
+            }
+        function pop()
+        {
+            arr.pop()
+            document.getElementById('print').innerHTML = arr
+        
+        }
+    </script>
+</body>
+</html>

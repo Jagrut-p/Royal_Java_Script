@@ -1,0 +1,38 @@
+<html>
+    <head><title></title></head>
+    <body onload="red()">
+    </body>
+    <script>
+        function green()
+    {
+        document.body.bgColor = 'green'
+        setTimeout(red,2000)
+        console.log("green")
+    }
+    function red()
+    {
+        document.body.bgColor = 'red'
+        setTimeout(yellow,2000)
+        console.log("red")
+    }
+    function yellow()
+    {
+        document.body.bgColor = 'yellow'
+        setTimeout(purple,2000)
+        console.log("yellow")
+    }
+    function purple()
+    {
+        document.body.bgColor = 'purple'
+        setTimeout(violate,2000)
+        console.log("purple")
+
+    }
+    function violate()
+    {
+        document.body.bgColor = 'violate'
+        setTimeout(green,2000)
+        console.log("violate")
+    }
+    </script>
+</html>

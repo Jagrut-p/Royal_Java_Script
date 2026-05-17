@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<style>
+    #d1,
+    #d2,
+    #d3,
+    #d4,
+    #d5,
+    #d6,
+    #d7,
+    #d8 {
+        width: 250px;
+        height: 250px;
+        border: 1px solid black;
+    }
+
+    #fl,
+    #f2 {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+
+<body>
+    <center>
+        <div id="fl">
+            <div onmouseleave="de1()" onmouseover="d1()" id="d1"></div>
+            <div onmouseleave="de2()" onmouseleave onmouseenter="d2()" id="d2"></div>
+            <div onmouseleave="de3()" onmouseenter="d3()" id="d3"></div>
+            <div onmouseleave="de4()" onmouseenter="d4()" id="d4"></div>
+        </div>
+
+        <div id="f2">
+            <div onmouseleave="de5()" onmouseenter="d5()" id="d5"></div>
+            <div onmouseleave="de6()" onmouseenter="d6()" id="d6"></div>
+            <div onmouseleave="de7()" onmouseenter="d7()" id="d7"></div>
+            <div onmouseleave="de8()" onmouseenter="d8()" id="d8"></div>
+        </div>
+    </center>
+</body>
+<script>
+    function de1() 
+    {
+        document.getElementById('d1').style.background = 'white'
+    }
+    function de2()
+    {
+        document.getElementById('d2').style.background = 'white'
+    }
+    function de3()
+    {
+        document.getElementById('d3').style.background = 'white'
+    }function de4()
+    {
+        document.getElementById('d4').style.background = 'white'
+    }function de5()
+    {
+        document.getElementById('d5').style.background = 'white'
+    }function de6()
+    {
+        document.getElementById('d6').style.background = 'white'
+    }function de7()
+    {
+        document.getElementById('d7').style.background = 'white'
+    }function de8()
+    {
+        document.getElementById('d8').style.background = 'white'
+    }
+    function d1()
+    {
+        document.getElementById('d1').style.backgroundColor = 'red'
+    }
+    function d2()
+    {
+        document.getElementById('d2').style.backgroundColor = 'green'
+    }
+    function d3()
+    {
+        document.getElementById('d3').style.backgroundColor = 'teal'
+    }
+    function d4()
+    {
+        document.getElementById('d4').style.backgroundColor = 'salmon'
+    }
+    function d5()
+    {
+        document.getElementById('d5').style.backgroundColor = 'lightpink'
+    }
+    function d6()
+    {
+        document.getElementById('d6').style.backgroundColor = 'lightgrey'
+    }
+    function d7()
+    {
+        document.getElementById('d7').style.backgroundColor = 'yellow'
+    }
+    function d8()
+    {
+        document.getElementById('d8').style.backgroundColor = 'gold'
+    }
+    </script>
+
+</html>
