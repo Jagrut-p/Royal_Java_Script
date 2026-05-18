@@ -8,32 +8,37 @@
 </head>
 
 <body>
-    <button onclick="blur1()">Blur</button>
-    <button onclick="grey1()">GreaySacle</button>
-    <button onclick="Bright1()">Brightness</button>
-    <button onclick="contrast1()">Contrast</button>
-    <button onclick="Hue-Rotate()">Hue-Rotate</button>
-    <button onclick="Invert()">Invert</button>
+    <button onclick="launch('blur')">Blur</button>
+    <button onclick="launch('grey1')">GreaySacle</button>
+    <button onclick="launch('Bright1')">Brightness</button>
+    <button onclick="launch('contrast1')">Contrast</button>
+    <button onclick="launch('Hue')">Hue-Rotate</button>
+    <button onclick="launch('invert1')">Invert</button>
     <br><br><br><br><br>
-    <img id="img1" src="./3.png" alt="">
+    <img id="img1" src="./3.png" alt="" filter="Contrast">
 </body>
 
 </html>
 <script>
-    function blur1() {
+    function launch(x) {
         console.log('1')
-        document.getElementById('img1').style.filter = "blur(50px)"
-    }
-    function grey1()
-    {
-        document.getElementById('img1').style.filter = "grayscale(50%)"
-    }
-    function Bright1()
-    {
-        document.getElementById('img1').style.filter = "brightness(150%)"
-    }
-    function contrast1()
-    {
-        document.getElementById('img1').style.filter = "contrast(40px)"
+        if (x == 'blur') {
+            document.getElementById('img1').style.filter = "blur(50px)"
+        }
+        if (x == 'grey1') {
+            document.getElementById('img1').style.filter = "grayscale(50%)"
+        }
+        if (x == 'Bright1') {
+            document.getElementById('img1').style.filter = "brightness(150%)"
+        }
+        if (x == 'contrast1') {
+            document.getElementById('img1').style.filter = "Contrast(40%)"
+        }
+        if (x == 'Hue') {
+            document.getElementById('img1').style.filter = "hue-rotate(100deg)";
+        }
+        if (x == 'invert1') {
+            document.getElementById('img1').style.filter = "Invert(50%)"
+        }
     }
 </script>

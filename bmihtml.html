@@ -6,22 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+     #text2{
+        color: grey;
+        font-size: 18px;
+    }
+    input {
+        width: 190px;
+        height: 30px;
+        border-radius: 10%;
+        border: 1px solid lightgrey;
+    }
+
+    #text1 {
+        font-weight: bold;
+        font-size: 22px;
+        margin-right: 85px;
+    }
+
+    button {
+        font-weight: 600;
+        height: 45px;
+        width: 65%;
+        background: linear-gradient(to right, #ff007f, #7a42f4);
+        color: white;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+
+    body {
+        background: linear-gradient(to right, #f3d7e2, #d6ddf7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #main {
+        border: 1px solid white;
+        box-shadow: 40% white;
+        border-radius: 10%;
+        height: 510px;
+        width: 320px;
+        background: white;
+    }
+   
+</style>
 
 <body>
-    <form name="form1">
-        <br>
-        Height: <br> <input id="h" type="text"><br>
-        Weight: <br><input id="w" type="text">
-        <div id="display"></div>
-    </form>
-    <button onclick="laucnh()">Calculate BMI</button>
+        <div id="main">
+            <center>
+                <h1>BMI Calculator</h1>
+                <div id="text2">Body Mass Index Checker</div>
+                <form name="form1">
+                </center>
+                <center>
+                    <br>
+                    <span style="text-align: left;" id="text1">Height (kg) </span><br><br> <input id="h" type="text"><br><br>
+                    <span id="text1">Weight (m) </span> <br><br><input id="w" type="text"><br><br>
+
+                </form>
+                <button onclick="laucnh()">Calculate BMI</button><br><br><br>
+                <div id="display"></div>
+                </center>
+    </div>
 </body>
 <script>
     function laucnh() {
         he = document.form1.h.value
         we = document.form1.w.value
         total = (we / (he * he))
-        console.log(total)
+        document.getElementById('display').innerHTML = "<div style='font-size: 20px; color: grey;'>Weight in kilograms: " + we + "<br>" + "Height in meters: " + he + "<br><br>" + "BMI : " + total + "</div>"
     }
 </script>
 

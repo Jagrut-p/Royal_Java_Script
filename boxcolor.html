@@ -47,9 +47,22 @@
         border: 1px solid teal;
         background-color: teal;
     }
+    #b6{
+        height: 30px;
+        width: 50px;
+        border: 1px solid gold;
+        background-color: gold;
+    }
 
     #main {
         display: flex;
+    }
+    #b7
+    {
+        height: 30px;
+        width: 50px;
+        border: 1px solid violet;
+        background-color: violet;
     }
 </style>
 
@@ -61,6 +74,8 @@
         <div onmouseenter="select1('green')" class="sel" id="b3" value="green"></div>
         <div onmouseenter="select1('grey')" class="sel" id="b4" value="grey"></div>
         <div onmouseenter="select1('teal')" class="sel" id="b5" value="teal"></div>
+        <div onmouseenter="select1('gold')" id="b6" ></div>
+        <div onmouseenter="select1('violet')" id="b7"></div>
     </div>
     <div id="box1"></div>
 </body>
@@ -77,6 +92,13 @@
             document.getElementById('box1').style.backgroundColor = 'teal'
         } if (x == 'blue') {
             document.getElementById('box1').style.backgroundColor = 'blue'
+        }
+        if (x == 'gold') {
+            document.getElementById('box1').style.backgroundColor = 'gold'
+        }
+        if(x=='violet')
+        {
+            document.getElementById('box1').style.backgroundColor = 'violet'
         }
     }
 </script>
