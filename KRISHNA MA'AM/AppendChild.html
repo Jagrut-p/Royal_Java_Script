@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppendChild</title>
+</head>
+
+<body>
+
+    Enter a Subject <input type="text" id="val">
+    <button onclick="apndChld()">Append Value </button>
+
+
+    <ul>
+        <li>Java</li>
+        <li>C</li>
+        <li>HTML</li>
+        <li>Css</li>
+    </ul>
+    <!-- <button onclick="apndChld()">Append Value </button> -->
+    <script>
+        function apndChld() {
+            let sub = document.querySelector('#val').value 
+            console.log(sub)
+            let creatTag = document.createElement('li')
+            console.log(creatTag)
+
+            let val = document.createTextNode(sub)
+
+            // let val = document.createTextNode("DBMS ---- JS")
+            console.log(val)
+
+            creatTag.appendChild(val)
+            console.log(creatTag)
+
+            document.querySelector('ul').appendChild(creatTag)
+
+        }
+    </script>
+</body>
+
+</html>

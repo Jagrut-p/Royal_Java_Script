@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <ul>
+        <li id="css">CSS<i class="fa fa-close" style="font-size:20px;color:red" onclick="remove('css')"></i></li>
+        <li id="java">Java<i class="fa fa-close" style="font-size:20px;color:red" onclick="remove('java')"></i></li>
+        <li id="html">HTML<i class="fa fa-close" style="font-size:20px;color:red" onclick="remove('html')"></i></li>
+        <li id="javascript">JavaScript<i class="fa fa-close" style="font-size:20px;color:red" onclick="remove('javascript')"></i></li>
+    </ul>
+</body>
+<script>
+    function remove(x)
+    {
+        document.getElementById(x).remove()
+    }
+</script>
+
+</html>

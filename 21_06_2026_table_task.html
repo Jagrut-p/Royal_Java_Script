@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter the First Name: <input type="text" name="fname"><br><br>
+        Enter the Last Name: <input type="text" name="lname"><br><br>
+    </form>
+    <button onclick="launch()">Submit</button>
+    <button onclick="remove()">Remove Last Element</button>
+    <table id="tb" border="1px solid black">
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+        </tr>
+    </table>
+</body>
+<script>
+    function launch() {
+        x = document.form1.fname.value
+        y = document.form1.lname.value
+        TD1 = document.createElement('td')
+        TD2 = document.createElement('td')
+        TR = document.createElement('tr')
+        a = document.createTextNode(x)
+        b = document.createTextNode(y)
+        TD1.appendChild(a)
+        TD2.appendChild(b)
+        TR.appendChild(TD1)
+        TR.appendChild(TD2)
+        document.getElementById('tb').appendChild(TR)
+    }
+    function remove() {
+        list = document.getElementById('tb')
+        x = document.getElementById('tb').lastElementChild
+        if (x) {
+            list.removeChild(x)
+        }
+    }
+</script>
+
+</html>

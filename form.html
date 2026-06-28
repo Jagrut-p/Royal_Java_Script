@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #display{
+        margin-top: 20px;
+        margin-left: 1000px;
+    }
+    button{
+        width: 310px;
+        height: 40px;
+        margin: 30px;
+        background-color: rgb(26, 27, 78);
+        color: white; 
+        border-radius: 10px;
+    }
+    #text2{
+        font-size: 20px;
+    }
+    body {
+        background-color: rgb(26, 27, 78);
+    }
+
+    input {
+        /* padding: 10px; */
+        border-radius: 10px;
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #main {
+        background-color: white;
+        width: 400px;
+        height: 400px;
+        border-radius: 10px;
+        margin-top: 100px;
+        justify-self: center;
+    }
+
+    #com {
+        margin: 30px 0px 0px 40px;
+    }
+    
+</style>
+
+<body>
+    <div id="display"></div>
+    <div id="main">
+        <center>
+            <br>
+            <div id="heaed"><h1>Login Form</h1></div>
+        </center>
+        <form action="" name="form1">
+            <div id="com">
+                <span id="text2">Email</span> <br><input id="em" type="text">
+            </div>
+            <div id="com">
+                 <span id="text2">Password</span> <br><input id="pa" type="text">
+            </div>
+        </form>
+        <button id="com" onclick="launch()">Login</button>
+    </div>
+
+</body>
+<script>
+    function launch() {
+        e = document.form1.em.value
+        p = document.form1.pa.value
+        if (e == 'admin@gmail.com' && p == '123') {
+            document.getElementById('display').innerHTML = '<div style="border:1px solid green; background-color: green; border-radius: 10px; height: 30px; width: 300px;  padding-left: 10px; padding-top: 12px; color: white;">Welcome Sucessfully Logged In</div>'  
+            document.getElementById('em').style.cssText = "border: 1px solid green; background-color: rgba(71, 240, 71, 0.733)";  
+            document.getElementById('pa').style.cssText = "border: 1px solid green; background-color: rgba(71, 240, 71, 0.733)";  
+
+
+        }
+        else{
+            document.getElementById('display').innerHTML = '<div style="border:1px solid red; background-color: red; border-radius: 10px; height: 30px; width: 300px;  padding-left: 10px; padding-top: 12px; color: white;">Invalid User or Password </div>'  
+            document.getElementById('em').style.cssText = "border: 1px solid red; background-color: rgba(255, 0, 0, 0.450)";  
+            document.getElementById('pa').style.cssText = "border: 1px solid red; background-color: rgba(255, 0, 0, 0.450)";  
+
+
+        }
+    }
+</script>
+
+</html>

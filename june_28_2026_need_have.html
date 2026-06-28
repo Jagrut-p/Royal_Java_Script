@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: yellow;
+    }
+
+    #box {
+        border: 1px solid black;
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        background-color: yellowgreen;
+    }
+
+    table {
+        width: 150px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <form action="" name="form1" onsubmit="event.preventDefault();">
+            <h2>Shopping List</h2>
+            Add Item: <input type="text" id="text1" name="text1">
+        </form>
+        <br>
+        <button onclick="have()">Have</button>
+        <button onclick="need()">Need</button>
+        <br><br>
+
+        <table id="ha" border="1px solid black">
+            <thead>
+                <tr>
+                    <th>Have</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Butter<i class="fa fa-close" style="font-size:20px;color:green;margin-left:10px;cursor:pointer;"
+                            onclick="removeRow(this)"></i></td>
+                </tr>
+                <tr>
+                    <td>Bread<i class="fa fa-close" style="font-size:20px;color:green;margin-left:10px;cursor:pointer;"
+                            onclick="removeRow(this)"></i></td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+
+        <table id="ne" border="1px solid black">
+            <thead>
+                <tr>
+                    <th>Need</th>
+                </tr>
+                <tr>
+                    <td>Bread<i class="fa fa-close" style="font-size:20px;color:red;margin-left:10px;cursor:pointer;"
+                            onclick="removeRow(this)"></i></td>
+                </tr>
+                <tr>
+                    <td>Eggs<i class="fa fa-close" style="font-size:20px;color:red;margin-left:10px;cursor:pointer;"
+                            onclick="removeRow(this)"></i></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+
+<script>
+    function removeRow(element) {
+        element.closest('tr').remove();
+    }
+
+    function have() {
+        var x = document.form1.text1.value.trim();
+        if (x == "") {
+            return;
+        }
+
+        var r = document.createElement('tr');
+        var d = document.createElement('td');
+        var i = document.createElement('i');
+
+        i.className = 'fa fa-close';
+        i.style.color = 'green';
+        i.style.marginLeft = '10px';
+        i.style.cursor = 'pointer';
+
+        d.textContent = x;
+        d.appendChild(i);
+        r.appendChild(d);
+        document.getElementById('ha').appendChild(r);
+
+        document.form1.text1.value = "";
+
+        i.addEventListener('click', function () {
+            r.remove();
+        });
+    }
+
+    function need() {
+        var x = document.form1.text1.value.trim();
+        if (x == "") {
+            return;
+        }
+
+        var r = document.createElement('tr');
+        var d = document.createElement('td');
+        var i = document.createElement('i');
+
+        i.className = 'fa fa-close';
+        i.style.color = 'red';
+        i.style.marginLeft = '10px';
+        i.style.cursor = 'pointer';
+
+        d.textContent = x;
+        d.appendChild(i);
+        r.appendChild(d);
+        document.getElementById('ne').appendChild(r);
+
+        document.form1.text1.value = "";
+
+        i.addEventListener('click', function () {
+            r.remove();
+        });
+    }
+</script>
+
+</html>

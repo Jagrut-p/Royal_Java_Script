@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    .display {
+        width: 230px;
+        height: 600px;
+        background-color: black;
+    }
+
+    #text1 {
+        color: white;
+        text-align: center;
+        padding: 50px;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 10px;
+    }
+    #butt{
+        margin-left: 90px;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div id="display">
+        <button id="butt" onclick="launch()">Menu</button><br><br>
+        <div id="main">
+            <div id="text1">Home</div>
+            <div id="text1">About Us</div>
+            <div id="text1">Services</div>
+            <div id="text1">Contact</div>
+        </div>
+    </div>
+</body>
+<script>
+    function launch() {
+        x = true
+        if (x == true) {
+            document.getElementById('display').classList.toggle('display')
+        }
+    }
+</script>
+
+</html>

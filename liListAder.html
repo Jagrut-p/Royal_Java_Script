@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="form1">
+        Enter the text to be inputed: <input type="text" name="text1" id="">
+    </form>
+    <button onclick="launch()">Submit</button>
+    <ul>
+        <li>CPP</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>JS</li>
+    </ul>
+</body>
+<script>
+    function launch() {
+        sub = document.form1.text1.value
+        tex = document.createTextNode(sub)
+        tag = document.createElement('li')
+        tag.appendChild(tex)
+        document.querySelector('ul').appendChild(tag)
+    }
+</script>
+
+</html>

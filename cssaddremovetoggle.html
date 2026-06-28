@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        color: green;
+    }
+    
+    .addcss{
+        background-color: teal;
+        color: white;
+        padding: 50px;
+    }
+</style>
+<body>
+    <div id="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores excepturi pariatur iure quos
+        dolores, nihil, sint molestias laudantium fugit, debitis voluptatum exercitationem. Vitae totam fugiat deleniti
+        deserunt minus, nemo consequatur?</div>
+        <button onclick="addcss()">AddCss</button>
+        <button onclick="removecss()">RemoveCss</button>
+        <button onclick="togglecss()">ToggleCss</button>
+</body>
+<script>
+    function addcss()
+    {
+        document.getElementById('box').classList.add('addcss')
+    }
+    function removecss()
+    {
+        document.getElementById('box').classList.remove('addcss')
+    }
+    function togglecss()
+    {
+        document.getElementById('box').classList.toggle('addcss')
+    }
+</script>
+</html>
