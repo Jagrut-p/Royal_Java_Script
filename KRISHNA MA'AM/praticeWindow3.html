@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="alertfun()">Alert</button>
+    <br>
+    <button onclick="coniform()">Confirm</button>
+    <br>
+    <button onclick="prompt1()">Prompt</button>
+    <br>
+    <button onclick="tab()">New Tab</button>
+    <br>
+</body>
+<script>
+    //1. Alert
+    function alertfun() {
+        window.alert("Hello World")
+    }
+    //2. Confirm
+    function coniform() {
+        let ans = window.confirm("Are you sure you want to submit")
+        console.log(ans)
+    }
+    // 3. Prompt
+    function prompt1() {
+        let win = window.prompt("Enter your Name: ");
+        console.log(win)
+    }
+    //4. New Tab
+    function tab() {
+        window.open("google.com")
+    }
+    // 5. Auto - Close Window opened via Script
+</script>
+
+</html>

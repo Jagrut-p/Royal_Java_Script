@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="changefun()">
+
+    <div id="change"></div>
+    
+</body>
+<script>
+    function changefun()
+    {
+        let innerwidth = window.innerWidth
+        let innerheight = window.innerHeight
+        let outerwidth = window.outerWidth
+        let outerheight = window.outerHeight
+        document.querySelector('#change').innerHTML = `InnerHeight:   ${innerwidth} <br> innerheight : ${innerheight} <br><br> OuterWidth : ${outerwidth} <br> OuterWidth ${outerheight}`; 
+    }
+</script>
+</html>

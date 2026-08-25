@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    students = [
+        { id: 1, name: "Amit", city: "Ahmedabad", marks: 78 },
+        { id: 2, name: "Neha", city: "Surat", marks: 85 },
+        { id: 3, name: "Rahul", city: "Vadodara", marks: 67 },
+        { id: 4, name: "Priya", city: "Rajkot", marks: 90 },
+        { id: 5, name: "Karan", city: "Ahmedabad", marks: 72 },
+        { id: 6, name: "Sneha", city: "Surat", marks: 81 },
+        { id: 7, name: "Vikas", city: "Mumbai", marks: 88 },
+        { id: 8, name: "Pooja", city: "Pune", marks: 76 },
+        { id: 9, name: "Arjun", city: "Delhi", marks: 69 },
+        { id: 10, name: "Meena", city: "Ahmedabad", marks: 84 },
+    ];
+
+    // 3. Compute total marks of Surat students using filtering, mapping, and reduction techniques.
+    let ch3 = students.filter(x => x.city == "Surat").map(x => x.marks).reduce((sum, marks) => marks + sum, 0)
+    console.log(ch3)
+    // 4. Determine total marks greater than 75 by selecting relevant students and aggregating marks.
+    let ch4 = students.filter(x => x.marks > 75).map(x => x.marks).reduce((sum, marks) => sum + marks, 0)
+    console.log(ch4)
+    // 5. Count students scoring above 80 using filtering and counting logic.
+    let ch5 = students.filter(x => x.marks > 80).map(x => x.marks).reduce((sum, marks) => sum + 1, 0)
+    console.log(ch5)
+    // 6. Calculate total marks below 80 using filter, map, and reduce.
+    let ch6 = students.filter(x => x.marks < 80).map(x => x.marks).reduce((sum, marks) => sum + marks, 0)
+    console.log(ch6)
+    // 7. Find total marks between 70 and 90 inclusive using range filtering and aggregation.
+    let ch7 = students.filter(x => x.marks >= 70 && x.marks <= 80).map(x => x.marks).reduce((sum, marks) => sum + marks, 0)
+    console.log(ch7)
+
+
+    // 8. Compute total marks of students whose names start with ter A.
+    let ch8 = students.filter(x => x.name.startsWith("A")).map(x => x.marks).reduce((sum, marks) => sum + marks, 0)
+    console.log(ch8)
+
+    // 9. Calculate average marks of Ahmedabad students by summing marks and dividing by count.
+    let count = students.filter(x => x.city == "Ahmedabad").map(x => x.marks).reduce((sum, marks) => sum + 1, 0)
+    let ch9 = students.filter(x => x.city == "Ahmedabad").map(x => x.marks).reduce((sum, marks) => sum + marks, 0) / count
+    console.log(ch9)
+    // 10. Find highest marks using transformation and reduction.
+    let ch10 = students.map(x => x.marks).reduce((max, marks) => Math.max(max, marks), 0);
+    console.log(ch10)
+    // 11. Determine lowest marks among students using reduction.
+    let ch11 = students.map(x => x.marks).reduce((min, marks) => Math.min(min, marks));
+    console.log(ch11)
+    // 12. Count Ahmedabad students using filtering.
+    let ch12 = students.filter(x => x.city == "Ahmedabad").reduce((sum) => sum + 1, 0)
+    console.log(ch12)
+    //  13. "Extract names of students scoring above 80.
+    let ch13 = students.filter(x => x.marks > 80).map(x => x.name)
+    console.log(ch13)
+    // 14 . Compute total marks of Mumbai students.
+    let ch14 = students.filter(x => x.city == "Mumbai").map(x => x.marks).reduce((sum, marks) => sum + marks, 0)
+    console.log(ch14)
+    // 15. Find names of students having even marks.
+    let ch15 = students.filter(x => x.marks % 2 == 0).map(x => x.name)
+    console.log(ch15)
+    // 16. Calculate total marks of students with odd scores.
+    let ch16 = students.filter(x => x.marks % 2 != 0).map(x => x.marks).reduce((sum) => sum + 1, 0)
+    console.log(ch16)
+    // 17. Find names of Ahmedabad students scoring above 75.
+    let ch17 = students.filter(x => x.city == "Ahmedabad" && x.marks > 75).map(x => x.name)
+    console.log(ch17)
+    // 18. Count names starting with S.
+    let ch18 = students.filter(x => x.name.startsWith("S")).reduce((sum) => sum + 1, 0)
+    console.log(ch18)
+    // 19. Double marks of students and compute total sum.
+    let ch19 = students.map(x => x.marks * 2).reduce((sum,marks) => sum + marks, 0)
+        console.log(ch19)
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openWindow()">Open New Window</button>
+    <button onclick="closeWindow()">Close New Window</button>
+
+    
+    <script>
+
+        // window.alert("Helllo")
+        // window.prompt("enter value")
+        let winName 
+
+            function openWindow(){
+                // window.open('ArrForm.html')
+                // window.open('ArrForm.html','mywindow','width=500px height=700px')
+                winName= window.open('','mywindow','width=500px height=700px')
+                console.log(winName)
+
+
+            }
+
+            function closeWindow(){
+                winName.close()
+            }
+
+    </script>
+</body>
+</html>

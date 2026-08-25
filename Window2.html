@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="alert1()">Alert</button>
+    <button onclick="coniform()">Coniform</button>
+    <button onclick="prompt1()">Prompt</button>
+    <button onclick="openwindow()">Open new Window</button>
+    <button onclick="autoclosewin()">Close window opened with Script</button>
+</body>
+<script>
+    //1. Window Alert
+    function alert1() {
+        window.alert("Hello, Royal!")
+    }
+    //2. Coniform
+    function coniform() {
+        let result = window.confirm("Do you want to continue: ");
+        console.log("Coniform Result: " + result)
+    }
+    //3. Prompt
+    function prompt1() {
+        let name = window.prompt("Enter your Name; ");
+        console.log("Prompt: " + name)
+    }
+    function openwindow() {
+        window.open("https://www.youtube.com/")
+    }
+    //5. Close the window opened via script
+    function autoclosewin() {
+        let win = window.open("", "", "width = 500, height = 500")
+        win.document.write("This window will be closed in 2 seconds")
+        setTimeout(() => win.close(), 2000)
+    }
+</script>
+
+</html>

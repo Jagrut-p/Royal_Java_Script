@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="changeSize()">
+    <h1>onRessize window</h1>
+    <p id="change">
+        width and Height
+    </p>
+    <script>
+
+        let cnt = 0
+        function changeSize(){
+            // console.log(cnt++)
+            
+            let width = window.innerWidth;
+            let height = window.innerHeight
+
+            document.querySelector('#change').innerHTML = `Innerwidth : ${width} <br>InnerHeight : ${height}<br><br>OuterWidth : ${window.outerWidth}<br>OuterHeight : ${window.outerHeight}`
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="launch()">OnClick</button>
+    <button onclick="close1()">Close</button>
+</body>
+<script>
+    let window1
+ function launch()
+    {
+        // window.open('sort.html', 'mywindow',);
+        window1 = window.open('','mywindow', 'width = 400px height = 200px');
+        console.log(window1)
+        console.log(window1.innerHeight);
+        console.log(window1.innerWidth);
+        console.log(window1.outerHeight);
+    }
+    function close1()
+    {
+        window1.close();
+    }
+</script>
+</html>
