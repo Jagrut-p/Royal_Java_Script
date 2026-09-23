@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees = [
+    {
+        id: 101,
+        name: "Aarav",
+        age: 25,
+        department: "IT",
+        salary: 45000,
+        city: "Ahmedabad",
+        experience: 2
+    },
+    {
+        id: 102,
+        name: "Diya",
+        age: 30,
+        department: "HR",
+        salary: 55000,
+        city: "Surat",
+        experience: 5
+    },
+    {
+        id: 103,
+        name: "Krish",
+        age: 28,
+        department: "Finance",
+        salary: 60000,
+        city: "Rajkot",
+        experience: 4
+    },
+    {
+        id: 104,
+        name: "Riya",
+        age: 24,
+        department: "IT",
+        salary: 42000,
+        city: "Vadodara",
+        experience: 1
+    },
+    {
+        id: 105,
+        name: "Vivaan",
+        age: 35,
+        department: "Marketing",
+        salary: 70000,
+        city: "Ahmedabad",
+        experience: 8
+    },
+    {
+        id: 106,
+        name: "Meera",
+        age: 29,
+        department: "HR",
+        salary: 50000,
+        city: "Surat",
+        experience: 6
+    },
+    {
+        id: 107,
+        name: "Arjun",
+        age: 32,
+        department: "IT",
+        salary: 65000,
+        city: "Rajkot",
+        experience: 7
+    },
+    {
+        id: 108,
+        name: "Kiara",
+        age: 27,
+        department: "Finance",
+        salary: 58000,
+        city: "Ahmedabad",
+        experience: 3
+    },
+    {
+        id: 109,
+        name: "Kabir",
+        age: 26,
+        department: "Marketing",
+        salary: 47000,
+        city: "Surat",
+        experience: 2
+    },
+    {
+        id: 110,
+        name: "Anaya",
+        age: 31,
+        department: "IT",
+        salary: 72000,
+        city: "Vadodara",
+        experience: 9
+    },
+    {
+        id: 111,
+        name: "Ishaan",
+        age: 23,
+        department: "Finance",
+        salary: 40000,
+        city: "Ahmedabad",
+        experience: 1
+    },
+    {
+        id: 112,
+        name: "Sara",
+        age: 34,
+        department: "HR",
+        salary: 68000,
+        city: "Rajkot",
+        experience: 10
+    },
+    {
+        id: 113,
+        name: "Reyansh",
+        age: 29,
+        department: "Marketing",
+        salary: 62000,
+        city: "Surat",
+        experience: 5
+    },
+    {
+        id: 114,
+        name: "Myra",
+        age: 22,
+        department: "IT",
+        salary: 39000,
+        city: "Ahmedabad",
+        experience: 1
+    },
+    {
+        id: 115,
+        name: "Advik",
+        age: 36,
+        department: "Finance",
+        salary: 75000,
+        city: "Vadodara",
+        experience: 11
+    },
+    {
+        id: 116,
+        name: "Siya",
+        age: 28,
+        department: "HR",
+        salary: 53000,
+        city: "Ahmedabad",
+        experience: 4
+    },
+    {
+        id: 117,
+        name: "Atharv",
+        age: 27,
+        department: "Marketing",
+        salary: 51000,
+        city: "Rajkot",
+        experience: 3
+    },
+    {
+        id: 118,
+        name: "Pari",
+        age: 33,
+        department: "IT",
+        salary: 69000,
+        city: "Surat",
+        experience: 8
+    },
+    {
+        id: 119,
+        name: "Yash",
+        age: 24,
+        department: "Finance",
+        salary: 44000,
+        city: "Ahmedabad",
+        experience: 2
+    },
+    {
+        id: 120,
+        name: "Aisha",
+        age: 30,
+        department: "Marketing",
+        salary: 61000,
+        city: "Vadodara",
+        experience: 6
+    }
+];
+
+    const name=employees.map(x=>x.name)
+    console.log(name)
+
+    const salary=employees.map(x=>x.salary)
+    console.log(salary)
+    
+    const NAME=employees.map(x=>x.name.toUpperCase())
+    console.log(NAME)
+
+    const newsal=employees.map(x=>x.salary+5000)
+    console.log(newsal)
+
+    const Name_DepName=employees.map(x=>"Name : " +x.name+"  Department Name : " +x.department)
+    console.log(Name_DepName)
+    
+    const str=employees.map(x=>x.name + " works in "+x.department)
+    console.log(str)
+    
+    const bonus=employees.map(x=>x.bonus=5000)
+    console.log(bonus) 
+
+    const ans8=employees.filter(x=>x.salary>60000)
+    console.log(ans8)
+        
+    const ans9=employees.filter(x=>x.department=="IT")
+    console.log(ans9)
+        
+    const ans10=employees.filter(x=>x.city=="Ahmedabad")
+    console.log(ans10)
+        
+    const ans11=employees.filter(x=>x.age>30)
+    console.log(ans11)
+        
+    const ans12=employees.filter(x=>x.experience>=5)
+    console.log(ans12)
+        
+    const ans13=employees.filter(x=>x.salary>=45000&&x.salary<=60000)
+    console.log(ans13)
+        
+    const ans14=employees.filter(x=>x.department=="Marketing")
+    console.log(ans14)
+        
+    const ans15=employees.filter(x=>x.age<28)
+    console.log(ans15)
+
+    const totsal=salary.reduce((sum,x)=>sum+x)
+    console.log(totsal)
+
+    const totexp=employees.reduce((sum,x)=>sum+x.experience,0)
+    console.log(totexp)
+
+    const totemp=employees.length
+    console.log(totemp)
+
+    const highsal=Math.max(...employees.map(x=>x.salary))
+    console.log(highsal)
+
+
+
+
+console.log(employees)
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lst">
+        <li>Chhota Bheem</li>
+        <li>Chhutki</li>
+        <li>Dholu</li>
+        <li>Bholu</li>
+        <li>Raju</li>
+        <li>Jaggu Bandar</li>
+    </ul>
+
+    <button onclick="Rem()">Remove Last Child</button>
+
+    <script>
+        function Rem()
+        {
+            list=document.getElementById('lst')
+            x=document.getElementById('lst').lastElementChild
+            
+            if(x)
+            {
+                list.removeChild(x)
+            }else
+            {
+                list.innerHTML="All Clear"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var total=0;
+        var sub=[];
+        for(i=0;i<5;i++)
+        {
+            sub[i]=parseInt(prompt("Enter Marks of Sub "+(i+1)+" : "));
+            total+=sub[i];
+        }
+        var avg=total/5;
+        new Promise((res,rej)=>{
+            if(avg>75)
+            {
+                res(avg)
+            }else
+            {
+                rej(avg)
+            }
+        })
+        .then((x)=>alert("Average : "+x+"\nYour Average is above 75."))
+        .catch((x)=>alert("Average : "+x+"\nYour Average is below 75."))
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter A Subject : <input type="text" id="sub">
+    <button onclick="add()">Append Value</button>
+
+    <ul>
+        <li>C</li>
+        <li>Cpp</li>
+        <li>Java</li>
+        <li>Python</li>
+    </ul>
+
+    <script>
+
+        function add()
+        {
+            let val=document.querySelector('#sub').value
+
+            let LI = document.createElement('li')
+
+            val=document.createTextNode(val)
+
+            LI.appendChild(val)
+            
+            document.querySelector('ul').appendChild(LI)
+        }
+
+
+
+    </script>
+</body>
+</html>

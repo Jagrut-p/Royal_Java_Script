@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .image1{
+            height: 200px;
+            width: 200px;   
+            background-image: url(rock.JPG);
+            background-size: contain;
+        }
+        
+        .image2{
+            height: 200px;
+            width: 200px;
+            background-image: url(paper.JPG);
+            background-size: contain;
+        }
+        
+        .image3{
+            height: 200px;
+            width: 200px;
+            background-image: url(scissor.JPG);
+            background-size: contain;
+        }
+
+        #disp{
+            font-size: 20px;
+            margin: 20px;
+            color: white;
+            padding: 20px;
+            width: 400px;
+            border-radius: 20px;
+            text-align: center center;
+        }
+
+        #count{
+            font-size: 25px;
+            font-weight: bolder;
+            margin: 20px;
+        }
+
+        h1{
+            background-color: darkslategrey;
+            margin-bottom: 30px ;
+            height: 55px;
+            color: white;
+            position: relative;
+            top: -22px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Rock Paper Scissor</h1>
+
+        <div style="display: flex; position: relative; left: 375px;">
+
+    <div onclick="win('rock')" class="image1"></div>
+
+    <div onclick="win('paper')" class="image2"></div>
+
+    <div onclick="win('scissor')" class="image3"></div>
+
+    </div>
+    <div id="count"></div>
+    <div id="disp"></div>
+    </center>
+    <script>
+        arr=['rock','paper','scissor']
+
+        
+        var wc=0;
+        var lc=0;
+        function win(vari){
+            
+        x=Math.floor(Math.random()*3)
+        x=arr[x]
+
+            document.getElementById('disp').style.backgroundColor="green"
+            
+            if(vari=='rock')
+            {
+                console.log(x)
+                if(x=='rock')
+                {
+                    document.getElementById('disp').innerHTML="Its A Draw.Rock Vs Rock"
+                }else if(x=='paper')
+                {
+                    document.getElementById('disp').innerHTML="You Lose.Rock Vs Paper"
+                    lc++;
+                }else if(x=='scissor')
+                {
+                    document.getElementById('disp').innerHTML="You Win.Rock Vs Scissor"
+                    wc++;
+                }
+            }
+            if(vari=='paper')
+            {
+                console.log(x)
+                if(x=='rock')
+                {
+                    document.getElementById('disp').innerHTML="You Win.Paper Vs Rock"
+                    wc++;
+                }else if(x=='paper')
+                {
+                    document.getElementById('disp').innerHTML="Its A Draw.Paper Vs Paper"
+                }else if(x=='scissor')
+                {
+                    document.getElementById('disp').innerHTML="You Lose.Paper Vs Scissor"
+                    lc++;
+                }
+            }
+            if(vari=='scissor')
+            {
+                console.log(x)
+                if(x=='rock')
+                {
+                    document.getElementById('disp').innerHTML="You Lose.Scissor Vs Rock"
+                    lc++;
+                }else if(x=='paper')
+                {
+                    document.getElementById('disp').innerHTML="You Win.Scissor VS Paper"
+                    wc++;
+                }else if(x=='scissor')
+                {
+                    document.getElementById('disp').innerHTML="Its A Draw.Scissor Vs Scissor"
+                }
+            }
+
+            
+            document.getElementById('count').innerHTML="You : " + wc + "   Comp : " + lc
+            
+        }
+    </script>
+</body>
+</html>

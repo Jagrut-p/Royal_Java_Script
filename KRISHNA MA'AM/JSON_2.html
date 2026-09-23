@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+
+<body>
+    <script>
+        // json 
+        // jvascript object notation
+
+
+        const Student = {
+            "name": "Yug",
+            "course": ["C", 'CPP', 'HTML', 'JAVA'],
+            "marks" : ["95", '93', '94', '96'],
+        }
+
+        var total=0,avg=0;
+        for (key in Student.course) 
+        {
+            document.write(Student.course[key] + " : "+Student.marks[key]+"<br>")
+            total=total+parseFloat(Student.marks[key])
+        }
+        avg=total/4
+            document.write("<br>" + "Total : "+total)
+            document.write("<br>" + "Average : "+avg)
+
+    </script>
+</body>
+
+</html>

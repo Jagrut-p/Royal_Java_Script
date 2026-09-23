@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+        }
+
+        #content{
+            height: 400px;
+            width: 550px;
+            background-color: red;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <div style="background-color: red;" class="box" onmouseover="func('red')"></div>
+        <div style="background-color: black;" class="box" onmouseover="func('black')"></div>
+        <div style="background-color: magenta;" class="box" onmouseover="func('magenta')"></div>
+        <div style="background-color: yellow;" class="box" onmouseover="func('yellow')"></div>
+        <div style="background-color: orange;" class="box" onmouseover="func('orange')"></div>
+        <div style="background-color: violet;" class="box" onmouseover="func('violet')"></div>
+        <div style="background-color: indigo;" class="box" onmouseover="func('indigo')"></div>
+        <div style="background-color: blue;" class="box" onmouseover="func('blue')"></div>
+        <div style="background-color: green;" class="box" onmouseover="func('green')"></div>
+        <div style="background-color: coral;" class="box" onmouseover="func('coral')"></div>
+    </div>
+    <div id="content">
+
+    </div>
+
+    <script>
+        function func(vari)
+        {
+            if(vari=='red')
+            {
+                document.getElementById('content').style.backgroundColor="red"
+            }else if(vari=='black')
+            {
+                document.getElementById('content').style.backgroundColor="black"
+            }else if(vari=='magenta')
+            {
+                document.getElementById('content').style.backgroundColor="magenta"
+            }else if(vari=='yellow')
+            {
+                document.getElementById('content').style.backgroundColor="yellow"
+            }else if(vari=='orange')
+            {
+                document.getElementById('content').style.backgroundColor="orange"
+            }else if(vari=='violet')
+            {
+                document.getElementById('content').style.backgroundColor="violet"
+            }else if(vari=='indigo')
+            {
+                document.getElementById('content').style.backgroundColor="indigo"
+            }else if(vari=='blue')
+            {
+                document.getElementById('content').style.backgroundColor="blue"
+            }else if(vari=='green')
+            {
+                document.getElementById('content').style.backgroundColor="green"
+            }else if(vari=='coral')
+            {
+                document.getElementById('content').style.backgroundColor="coral"
+            }
+
+        }
+    </script>
+</body>
+</html>

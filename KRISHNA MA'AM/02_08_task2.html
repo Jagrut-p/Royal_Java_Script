@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        new Promise((res,rej)=>
+        {
+            let flag=true;
+            if(flag)
+            {
+                res({name:"Yug",age:20})
+            }else
+            {
+                rej({task:"Fail"})
+            }
+        })
+        .then((x)=>
+        {   
+            console.log(x)
+            return x.name
+        })
+        .then((x)=>{
+            console.log(x)
+            return "done"
+        })
+        .then((msg)=>
+        {
+            console.log(msg)
+        })
+        .catch((x)=>{
+            console.log(x.task)
+        })
+        .finally(function(){
+            console.log("Check")
+        })
+
+
+    </script>
+</body>
+</html>

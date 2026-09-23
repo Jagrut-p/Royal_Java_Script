@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.851);
+            color:white;
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input{
+            background-color: rgb(34, 174, 34);
+            color: white;
+            border-radius: 10px;
+            height: 40px;
+            width: 90px;
+            margin: 5px;
+            margin-bottom: 30px;
+        }
+
+        .heading{
+            margin-top: 60px;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+
+        #d1,#d2,#d3,#d4{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form name="f1">
+    <div class="heading">Vote For Your Favourite Programming Language</div>
+    <input type="button" onclick="vote('js')" value="Javascript">
+    <input type="button" onclick="vote('java')" value="Java"></button>
+    <input type="button" onclick="vote('css')" value="CSS"></button>
+    <input type="button" onclick="vote('py')" value="Python"></button>
+    </form>
+
+    <div id="d1">Javascript : </div>
+    <div id="d2">Java : </div>
+    <div id="d3">CSS : </div>
+    <div id="d4">Python : </div>
+    </center>
+
+    <script>
+        
+            let jsv=0,jv=0,cv=0,pv=0;
+
+        function vote(val)
+        {
+            if(val=="js")
+            {
+                jsv++;
+            }else if(val=="java")
+            {
+                jv++;
+            }else if(val=="css")
+            {
+                cv++;
+            }else if(val=="py")
+            {
+                pv++;
+            }
+
+            document.getElementById('d1').innerHTML = " Javascript : " + jsv + " votes";
+            document.getElementById('d2').innerHTML = " Java : " + jv + " votes";
+            document.getElementById('d3').innerHTML = " CSS : " + cv + " votes";
+            document.getElementById('d4').innerHTML = " Python : " + pv + " votes";
+        }
+    </script>
+</body>
+</html>

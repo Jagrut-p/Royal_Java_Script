@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="func('blur')">BLUR</button>
+    <button onclick="func('gray')">GRAYSCALE</button>
+    <button onclick="func('bri')">BRIGHTNESS</button>
+    <button onclick="func('con')">CONTRAST</button>
+    <button onclick="func('hue')">HUE-ROTATE</button>
+    <button onclick="func('inv')">INVERT</button>
+
+    <div>
+        <img id="i1" src="chacha.jpg">
+    </div>
+
+    <script>
+
+        function func(vari)
+        {
+            if(vari=='blur')
+            {
+                document.getElementById('i1').style.filter="blur(5px)"
+            }else if(vari=='gray')
+            {
+                document.getElementById('i1').style.filter="grayscale(50%)"
+            }else if(vari=='bri')
+            {
+                document.getElementById('i1').style.filter="brightness(50%)"
+            }else if(vari=='con')
+            {
+                document.getElementById('i1').style.filter="contrast(50%)"
+            }else if(vari=='hue')
+            {
+                document.getElementById('i1').style.filter="hue-rotate(270deg)"
+            }else if(vari=='inv')
+            {
+                document.getElementById('i1').style.filter="invert(100%)"
+            }
+        }
+    </script>
+</body>
+</html>

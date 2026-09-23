@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+
+    <style>
+        body {
+            background-color: beige;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        .main {
+            width: 600px;
+            margin-left: 360px;
+            margin-top: 15px;
+            background-color: whitesmoke;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px black;
+        }
+
+        h1 {
+            background-color: purple;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: purple;
+        }
+
+        p {
+            font-size: 22px;
+            color: purple;
+            font-weight: bold;
+        }
+
+        #i1 {
+            width: 350px;
+            height: 60px;
+            font-size: 35px;
+            text-align: center;
+            border: 3px solid purple;
+            border-radius: 10px;
+            background-color: lightblue;
+            color: darkblue;
+        }
+
+        #btn {
+            width: 220px;
+            height: 55px;
+            border-radius: 40px;
+            border: none;
+            background-color: purple;
+            margin-top: 30px;
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #d1 {
+            margin-top: 30px;
+            font-size: 38px;
+            color: red;
+            font-weight: bold;
+        }
+
+        #d2 {
+            margin-top: 15px;
+            font-size: 28px;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        #d3 {
+            margin-top: 15px;
+            font-size: 25px;
+            color: darkblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <h1>Number Guessing Game</h1>
+
+        <p>Try and guess a random number between 1 to 100.</p>
+
+        <p>You have 10 attempts to guess the right number.</p>
+
+        <h2>Guess a Number</h2>
+
+        <div>
+            <input type="number" id="i1" min="1" max="100">
+        </div>
+
+        <div>
+            <input type="button" id="btn" onclick="check()" value="Submit Guess">
+        </div>
+
+        <div id="d3">
+            Previous Guesses :
+        </div>
+
+        <div id="d2">
+            Remaining Attempts : 10
+        </div>
+
+        <div id="d1"></div>
+
+    </div>
+
+    <script>
+
+        var x = Math.floor(Math.random() * 100 + 1)
+        var rattempt = 10
+        var guess = ""
+
+        function check() {
+
+            let a = document.getElementById('i1').value
+            let b = document.getElementById('d1')
+
+            if (rattempt > 0) {
+
+                guess = guess + a + " "
+
+                document.getElementById('d3').innerHTML ="Previous Guesses : " + guess
+
+                if (a == x) {
+
+                    b.innerHTML = "Correct Guess!"
+                    b.style.color = "green"
+                    document.getElementById('i1').disabled="true"
+                    document.getElementById('btn').disabled="true"
+                }
+                else if (a > x) {
+
+                    b.innerHTML = "Too High! Try Again."
+                    b.style.color = "red"
+
+                }
+                else if (a < x) {
+
+                    b.innerHTML = "Too Low! Try Again."
+                    b.style.color = "blue"
+                }
+
+                rattempt--
+
+            }
+            else {
+
+                b.innerHTML = "Out Of Attempts"
+                b.style.color = "black"
+                document.getElementById('i1').disabled="true"
+                document.getElementById('btn').disabled="true"
+            }
+
+            document.getElementById('d2').innerHTML ="Remaining Attempts : " + rattempt
+            document.getElementById('i1').value = ""
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://media.greeksforgreeks.org/wp-content/uploads/OFFbulb.jpg" id="image">
+    <button onclick="turn('on')">Turn On</button>
+    <button onclick="turn('off')">Turn Off</button>
+
+    <script>
+        function turn(val)
+        {
+            if(val=='on')
+            {
+                document.getElementById('image').src="bulbon.avif"
+            }else{
+                document.getElementById('image').src="bulboff.png"   
+            }
+        }
+    </script>
+</body>
+</html>

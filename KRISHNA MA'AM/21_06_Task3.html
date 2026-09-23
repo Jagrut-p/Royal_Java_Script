@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    Enter A Subject : <input type="text" id="sub">
+
+    <br><br>
+    
+    Enter Marks : <input type="text" id="mark">
+
+    <button onclick="add()">Append Value</button>
+    <button onclick="remove()">Remove Last Value</button>
+
+    <form>
+        <br><br>
+        <table border="3" cellpadding="10px">
+            <tr>
+                <td>Subject</td>
+                <td>Marks</td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function add()
+        {
+            sub=document.getElementById('sub').value
+            marks=document.getElementById('mark').value
+
+            TR=document.createElement('tr')
+
+            TD1=document.createElement('td')
+            TD2=document.createElement('td')
+
+            sub=document.createTextNode(sub)
+            marks=document.createTextNode(marks)
+
+            TD1.appendChild(sub)
+            TD2.appendChild(marks)
+            TR.appendChild(TD1)
+            TR.appendChild(TD2)
+
+            document.querySelector('table').appendChild(TR)
+
+        }
+
+        function remove()
+        {
+            remTR=document.querySelector('table').lastElementChild
+            table=document.querySelector('table')
+            
+            table.removeChild(remTR)
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <select id="s" onchange="changecolor()">
+        <option>Orange</option>
+        <option>Gold</option>
+        <option>Wheat</option>
+        <option>Cyan</option>
+        <option>lightgreen</option>
+    </select>
+
+    <br><br><br><br><br>
+
+    <table cellpadding="80" border="1" cellspacing="0" id="t">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <script>
+        function changecolor() {
+            let color = document.getElementById('s').value
+            document.getElementById('t').style.backgroundColor = color
+        }
+    </script>
+</body>
+
+</html>

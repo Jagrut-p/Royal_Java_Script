@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        students = [
+            { id: 1, name: "Amit", city: "Ahmedabad", marks: 78 },
+            { id: 2, name: "Neha", city: "Surat", marks: 85 },
+            { id: 3, name: "Rahul", city: "Vadodara", marks: 67 },
+            { id: 4, name: "Priya", city: "Rajkot", marks: 90 },
+            { id: 5, name: "Karan", city: "Ahmedabad", marks: 72 },
+            { id: 6, name: "Sneha", city: "Surat", marks: 81 },
+            { id: 7, name: "Vikas", city: "Mumbai", marks: 88 },
+            { id: 8, name: "Pooja", city: "Pune", marks: 76 },
+            { id: 9, name: "Arjun", city: "Delhi", marks: 69 },
+            { id: 10, name: "Meena", city: "Ahmedabad", marks: 84 },
+        ];
+
+        const sname=students.map(x=>x.name)
+        document.write(sname+"<br><br>")
+
+        const scity=students.map(x=>x.city)
+        document.write(scity+"<br><br>")
+
+        const smarks=students.map(x=>x.marks)
+        document.write(smarks+"<br><br>")
+
+        const sid=students.map(x=>x.id)
+        document.write(sid+"<br><br>")
+        
+        const ans5=students.filter(x=>x.city=="Ahmedabad")
+        console.log(ans5)
+        
+        const ans6=students.filter(x=>x.marks>80)
+        console.log(ans6)
+        
+        const ans7=students.filter(x=>x.marks<70)
+        console.log(ans7)
+        
+        const ans8=students.filter(x=>x.city=="Surat")
+        console.log(ans8)
+        
+        const ans9=students.filter(x=>x.marks>=85)
+        console.log(ans9)
+        
+        const ans10=students.filter(x=>x.city=="Pune")
+        console.log(ans10)
+        
+        
+    </script>
+</body>
+</html>

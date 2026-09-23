@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        .common {
+            height: 300px;
+            width: 300px;
+        }
+
+        .main {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="common" id="d1" onmousemove="move()" onmouseleave="leave()"></div>
+        <div class="common" id="d2" onmousemove="move2()" onmouseleave="leave()"></div>
+        <div class="common" id="d3" onmousemove="move3()" onmouseleave="leave()"></div>
+        <div class="common" id="d4" onmousemove="move4()" onmouseleave="leave()"></div>
+        <div class="common" id="d5" onmousemove="move5()" onmouseleave="leave()"></div>
+    </div>
+    <div class="main">
+        <div class="common" id="d6" onmousemove="move6()" onmouseleave="leave()"></div>
+        <div class="common" id="d7" onmousemove="move7()" onmouseleave="leave()"></div>
+        <div class="common" id="d8" onmousemove="move8()" onmouseleave="leave()"></div>
+        <div class="common" id="d9" onmousemove="move9()" onmouseleave="leave()"></div>
+        <div class="common" id="d10" onmousemove="move10()" onmouseleave="leave()"></div>
+    </div>
+
+    <script>
+        function move() {
+            document.getElementById("d1").style.backgroundColor = "Red"
+        }
+        function move2() {
+            document.getElementById("d2").style.backgroundColor = "blue"
+        }
+        function move3() {
+            document.getElementById("d3").style.backgroundColor = "yellow"
+        }
+        function move4() {
+            document.getElementById("d4").style.backgroundColor = "green"
+        }
+        function move5() {
+            document.getElementById("d5").style.backgroundColor = "orange"
+        }
+        function move6() {
+            document.getElementById("d6").style.backgroundColor = "purple"
+        }
+        function move7() {
+            document.getElementById("d7").style.backgroundColor = "magenta"
+        }
+        function move8() {
+            document.getElementById("d8").style.backgroundColor = "salmon"
+        }
+        function move9() {
+            document.getElementById("d9").style.backgroundColor = "violet"
+        }
+        function move10() {
+            document.getElementById("d10").style.backgroundColor = "indigo"
+        }
+
+        function leave()
+        {
+            document.getElementById("d1").style.backgroundColor="white"
+            document.getElementById("d2").style.backgroundColor="white"
+            document.getElementById("d3").style.backgroundColor="white"
+            document.getElementById("d4").style.backgroundColor="white"
+            document.getElementById("d5").style.backgroundColor="white"
+            document.getElementById("d6").style.backgroundColor="white"
+            document.getElementById("d7").style.backgroundColor="white"
+            document.getElementById("d8").style.backgroundColor="white"
+            document.getElementById("d9").style.backgroundColor="white"
+            document.getElementById("d10").style.backgroundColor="white"
+        }
+    </script>
+</body>
+
+</html>

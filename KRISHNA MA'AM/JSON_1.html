@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    <script>
+        // json 
+        // jvascript object notation
+
+
+        const Student = {
+            "Maths" : "99",
+            "Science" : "98",
+            "English" : "90",
+            "Social Science" : "94",
+            "Hindi" : "89"
+        }
+        
+        // console.log(typeof Student)
+        // console.log(Student)
+        // document.write(Student.name)
+
+        var kc=0;
+        var total=0;
+        for(key in Student){
+            document.write(key+ " : " + Student[key]+"<br>")
+
+            total = total+parseFloat(Student[key]);
+            kc++;
+        }
+
+        var avg=parseFloat(total/kc);
+
+        
+        document.write("<br>"+"Total : " + total +"<br>");
+            
+        document.write("Average : " + avg +"<br>");
+
+        if(avg>90 && avg<=100)
+        {
+            document.write("Grade : A+");
+        }else if(avg>80 && avg<=90)
+        {
+            document.write("Grade : A");
+        }else if(avg>70 && avg<=80)
+        {
+            document.write("Grade : B+");
+        }else if(avg>60 && avg<=70)
+        {
+            document.write("Grade : B");
+        }else if(avg>50 && avg<=60)
+        {
+            document.write("Grade : C+");
+        }else if(avg>40 && avg<=50)
+        {
+            document.write("Grade : C");
+        }else
+        {
+            document.write("Grade : Fail");
+        }
+    </script>
+</body>
+</html>
+<!-- 
+class abc{
+    int a
+}
+abc.a -->
+
+<!-- 
+
+    marks " 5 "
+    total 
+    avg
+    grade
+
+-->

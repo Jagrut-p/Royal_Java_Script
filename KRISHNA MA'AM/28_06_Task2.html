@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+
+        #n{
+            font-size: 18px;
+            border: 3px solid aliceblue;
+            border-radius: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>My Contact Book</h1>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="email" placeholder="Email">
+
+    <button onclick="add()">Add Contact</button>
+
+        <div id="n"></div> 
+</center>
+    <script>
+        function add()
+        {
+
+                nam=document.getElementById('name').value
+                email=document.getElementById('email').value
+
+                DIV=document.createElement('div')
+
+                nam=document.createTextNode(nam)
+                email=document.createTextNode(email)
+
+                
+                B=document.createElement('b')
+
+                B.appendChild(nam)
+
+                DIV.appendChild(B)
+                BR=document.createElement('br')
+                DIV.appendChild(BR)
+                DIV.appendChild(email)
+
+                DIV.style.backgroundColor="white"
+                DIV.style.height="80px"
+                DIV.style.width="350px"
+                
+
+
+
+                document.querySelector('#n').appendChild(DIV)
+        }
+
+    </script>
+
+</body>
+</html>

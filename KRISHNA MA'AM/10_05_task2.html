@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">
+        Let me hide!!!
+    </div>
+
+    <div>
+        <input onclick="check('hide')" type="button" value="Hide">
+        <input onclick="check('unhide')" type="button" value="Unhide">
+    </div>
+    <script>
+        function check(vari)
+        {
+            if(vari=='hide')
+            {
+                document.getElementById('d1').innerHTML=""
+            }else if(vari=='unhide')
+            {
+                document.getElementById('d1').innerHTML="Let me hide!!!"
+            }
+        }
+    </script>
+</body>
+</html>

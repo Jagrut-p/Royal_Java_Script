@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+
+<body>
+    <script>
+
+        const Student = {
+            "name": "Ram",
+            "course": ["C", 'CPP', 'HTML', 'JAVA'],
+            "address": {city:"Ahmedabad" ,"State":"Gujarat", "country":"India"},
+        }
+
+        
+        for (key in Student.course) 
+        {
+            document.write(key + " : "+Student.course[key]+"<br>")
+        }
+
+        
+            document.write("<br><br>")
+        for (key in Student.address) 
+        {
+            document.write(key + " : "+Student.address[key]+"<br>")
+        }
+
+    </script>
+</body>
+
+</html>

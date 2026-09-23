@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+    <style>
+        body{
+            background-color: black;
+            background-image: url('lib.jpeg');
+        }
+
+        .dis{
+            height: 200px;
+            width: 650px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            position: relative;
+            top: 100px;
+            opacity: 0.95;
+        }
+        #quote{
+            width: 600px;
+            height: 60px;
+            text-align: center;
+            margin: 10px;
+            padding-top: 45px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #name{
+            width: 600px;
+            height: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2 style="position: relative;top: 100px; color: aqua;">Quote Generator</h2>
+    <div class="dis">
+        <div id="quote">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni maiores dolorem dolor ea, sunt deleniti quisquam! Quae soluta error laborum perspiciatis, reprehenderit recusandae iste nisi ad, ipsum, odit a vel?
+        </div>
+        <div id="name">
+            - Socrates
+        </div>
+        <button onclick="quotes()" style="position: relative; top: 25px;">New Quote</button>
+    </div>
+    </center>
+    <script>
+
+        const Author = [
+            {
+                "name":"- Mahatma Gandhi",
+                "Quotes":"“Be the change that you wish to see in the world.”"
+            },
+            {
+                "name":"- Ratan Tata",
+                "Quotes":"“The only thing that will stop you from achieving your dreams is you.”"
+            },
+            {
+                "name":"- A.P.J. Abdul Kalam",
+                "Quotes":"“Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”"
+            },
+            {
+                "name":"- Kalpana Chawla",
+                "Quotes":"“I touch the future. I teach.”"
+            },
+            {
+                "name":"- J.R.D. Tata",
+                "Quotes":"“You will face many defeats in life, but never let yourself be defeated.”"
+            },
+            {
+                "name":"- Lata Mangeshkar",
+                "Quotes":"“The only way to do great work is to love what you do.”"
+            },
+            {
+                "name":"- Vikram Sarabhai",
+                "Quotes":"“There are moments when one must be strong enough to be weak.”"
+            },
+            {
+                "name":"- B.R. Ambedkar",
+                "Quotes":"“I measure the progress of a community by the degree of progress which women have achieved.”"
+            },
+            {
+                "name":"- Rabindranath Tagore",
+                "Quotes":"“I seem to have loved you in numberless forms, numberless times, in life after life, in age after age forever.”"
+            },
+            {
+                "name":"- Swami Vivekananda",
+                "Quotes":"“You have to grow from the inside out. None can teach you, none can make you spiritual. There is no other teacher but your own soul.”"
+            }
+        ]
+
+                  
+     
+                 
+            
+
+
+
+        function quotes()
+        {
+            
+            var x=Math.floor(Math.random()*10)
+
+            document.getElementById("quote").innerHTML=Author[x].Quotes
+            
+            document.getElementById("name").innerHTML=Author[x].name
+        }
+    </script>
+</body>
+
+</html>

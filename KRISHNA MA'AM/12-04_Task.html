@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Mouse Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #d1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+        <div id="d1">Hello</div>
+    
+        <br>
+        <button onclick="Clicked()">Try Me</button>
+        <a href="https://www.google.com" id="a1">Google</a>
+        <button onclick="Clicked2()">Click</button>
+
+    <script>
+        function Clicked()
+        {
+            document.getElementById('d1').innerHTML="Hello World"
+            document.getElementById('d1').style.color="red"
+        }
+        function Clicked2()
+        {
+            document.getElementById('a1').innerHTML="Netflix"
+            document.getElementById('a1').href="https://www.netflix.com"
+        }
+        
+
+    </script>
+</body>
+
+</html>

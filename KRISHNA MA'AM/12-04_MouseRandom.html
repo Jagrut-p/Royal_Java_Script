@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Mouse Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #d1 {
+            height: 210px;
+            width: 320px;
+            border: 5px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+        <div id="d1" onmousemove="Move()"></div>
+
+    <script>
+        color=['Violet','Indigo','Blue','Green','Yellow','Orange','Red','White']
+
+        function Move()
+        {
+            random=Math.floor(Math.random()*8)
+            document.getElementById('d1').style.backgroundColor=color[random]
+        }
+
+    </script>
+</body>
+
+</html>

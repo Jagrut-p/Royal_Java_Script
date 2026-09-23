@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <title>Mouse Event</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+
+        #d1 {
+            height: 210px;
+            width: 320px;
+            background-color: orange;
+            border: 5px dotted black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+
+        #d2 {
+            height: 210px;
+            width: 320px;
+            background-color: aqua;
+            border: 5px groove black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+
+        #d3 {
+            height: 210px;
+            width: 320px;
+            background-color: green;
+            border: 5px double black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+
+        #d4 {
+            height: 210px;
+            width: 320px;
+            background-color: magenta;
+            border: 5px dashed black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div id="d1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa eveniet, harum, expedita
+            obcaecati asperiores enim excepturi velit et voluptas omnis aliquam dicta molestias repellat, doloremque
+            sint eum explicabo mollitia!</div>
+
+        <div id="d2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa eveniet, harum, expedita
+            obcaecati asperiores enim excepturi velit et voluptas omnis aliquam dicta molestias repellat, doloremque
+            sint eum explicabo mollitia!</div>
+
+        <div id="d3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa eveniet, harum, expedita
+            obcaecati asperiores enim excepturi velit et voluptas omnis aliquam dicta molestias repellat, doloremque
+            sint eum explicabo mollitia!</div>
+
+        <div id="d4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex culpa eveniet, harum, expedita
+            obcaecati asperiores enim excepturi velit et voluptas omnis aliquam dicta molestias repellat, doloremque
+            sint eum explicabo mollitia!</div>
+
+    </div>
+    <br>
+    <br>
+    <center>
+        <button onclick="Clicked()">Try Me</button>
+        <button onclick="reset()">Reset</button>
+    </center>
+    <script>
+
+        function Clicked() {
+            document.getElementById('d1').style.backgroundColor = "red"
+            document.getElementById('d1').style.borderRadius = "50%"
+            document.getElementById('d1').style.alignContent="center"
+            document.getElementById('d1').style.textAlign="justify"
+            document.getElementById('d1').style.color="white"
+
+            document.getElementById('d2').style.backgroundColor = "salmon"
+            document.getElementById('d2').style.borderRadius = "50%"
+            document.getElementById('d2').style.alignContent="center"
+            document.getElementById('d2').style.textAlign="justify"
+            document.getElementById('d2').style.color="blue"
+
+            document.getElementById('d3').style.backgroundColor = "purple"
+            document.getElementById('d3').style.borderRadius = "50%"
+            document.getElementById('d3').style.alignContent="center"
+            document.getElementById('d3').style.textAlign="justify"
+            document.getElementById('d3').style.color="lightgreen"
+
+            document.getElementById('d4').style.backgroundColor = "darkblue"
+            document.getElementById('d4').style.borderRadius = "50%"
+            document.getElementById('d4').style.alignContent="center"
+            document.getElementById('d4').style.textAlign="justify"
+            document.getElementById('d4').style.color="cyan"
+        }
+
+
+        function reset() {
+            document.getElementById('d1').style.backgroundColor = "orange"
+            document.getElementById('d1').style.borderRadius = "10px"
+            document.getElementById('d1').style.alignContent="baseline"
+            document.getElementById('d1').style.textAlign="none"
+            document.getElementById('d1').style.color="black"
+
+            document.getElementById('d2').style.backgroundColor = "cyan"
+            document.getElementById('d2').style.borderRadius = "10px"
+            document.getElementById('d2').style.alignContent="baseline"
+            document.getElementById('d2').style.textAlign="none"
+            document.getElementById('d2').style.color="black"
+
+            document.getElementById('d3').style.backgroundColor = "green"
+            document.getElementById('d3').style.borderRadius = "10px"
+            document.getElementById('d3').style.alignContent="baseline"
+            document.getElementById('d3').style.textAlign="none"
+            document.getElementById('d3').style.color="black"
+
+            document.getElementById('d4').style.backgroundColor = "magenta"
+            document.getElementById('d4').style.borderRadius = "10px"
+            document.getElementById('d4').style.alignContent="baseline"
+            document.getElementById('d4').style.textAlign="none"
+            document.getElementById('d4').style.color="black"
+        }
+
+
+    </script>
+</body>
+
+</html>

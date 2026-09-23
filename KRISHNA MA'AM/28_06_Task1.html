@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Shopping List</h1>
+    <b style="font-size:20px;">Add items : </b><input type="text" id="itm">
+
+    <button onclick="add('need')">Need</button>
+    <button onclick="add('have')">Have</button>
+
+    <form>
+        <br>
+        <table border="1" cellpadding="11px" cellspacing="1px" id="tbl1" width="155px" style="background-color: rgba(172, 255, 47, 0.893); border: 3px solid black;">
+            <h2 style="position: relative; right: 130px; font-size:30px; color: rebeccapurple;">Need:</h2>
+            <tr id="mk">
+                <td>Milk<i class="fa fa-close" style="font-size:22px;color:red; padding-left:72px;" onclick="rem('mk')"></i></td>
+            </tr>
+            <tr id="bd">
+                <td>Bread<i class="fa fa-close" style="font-size:22px;color:red; padding-left:65px;" onclick="rem('bd')"></i></td>
+            </tr>
+            <tr id="bt">
+                <td>Butter<i class="fa fa-close" style="font-size:22px;color:red; padding-left: 63px;" onclick="rem('bt')"></i></td>
+            </tr>
+            <tr id="hey">    
+                <td>Honey<i class="fa fa-close" style="font-size:22px;color:red; padding-left: 60px;" onclick="rem('hey')"></i></td>
+            </tr>
+        </table>
+
+        <table border="1" cellpadding="11px" cellspacing="1px" id="tbl1" width="155px" style="background-color: rgba(255, 166, 0, 0.725); border: 3px solid black;">
+            <h2 style="position: relative; right: 130px; font-size:30px; color: rebeccapurple;">Have:</h2>
+            <tr id="ge">
+                <td>Ghee<i class="fa fa-close" style="font-size:22px;color:red; padding-left:71px;" onclick="rem('ge')"></i></td>
+            </tr>
+            <tr id="bm">
+                <td>Buttermilk<i class="fa fa-close" style="font-size:22px;color:red; padding-left: 35px;" onclick="rem('bm')"></i></td>
+            </tr>
+            <tr id="pr">
+                <td>Paneer<i class="fa fa-close" style="font-size:22px;color:red; padding-left: 60px;" onclick="rem('pr')"></i></td>
+            </tr>
+            <tr id="cid">    
+                <td>Curd<i class="fa fa-close" style="font-size:22px;color:red; padding-left: 71px;" onclick="rem('cid')"></i></td>
+            </tr>
+        </table>
+    </form>
+</center>
+    <script>
+        function add(vari)
+        {
+
+                item=document.getElementById('itm').value
+
+                TR=document.createElement('tr')
+
+                TD=document.createElement('td')
+
+                item=document.createTextNode(item)
+
+                TD.appendChild(item)
+
+                i = document.createElement("i")
+                i.className = "fa fa-close"
+                i.style.fontSize = "22px"
+                i.style.color = "red"
+
+                TD.style.position = "relative"
+
+                i.style.position = "absolute"
+                i.style.right = "15px"
+                
+                TD.appendChild(i)
+                TR.appendChild(TD)
+
+                i.onclick=function()
+                {
+                    TR.remove()
+                }
+
+                if(vari=='need')
+                {
+                    document.querySelector('#tbl1').appendChild(TR)
+                }else if(vari=='have')
+                {
+                    document.querySelector('#tbl2').appendChild(TR)
+                }
+
+        }
+
+        function rem(vari)
+        {
+            document.getElementById(vari).remove()
+        }
+    </script>
+
+</body>
+</html>

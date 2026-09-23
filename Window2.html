@@ -9,35 +9,133 @@
 
 <body>
     <button onclick="alert1()">Alert</button>
-    <button onclick="coniform()">Coniform</button>
-    <button onclick="prompt1()">Prompt</button>
-    <button onclick="openwindow()">Open new Window</button>
+    <br><br>
+    <button onclick="coniform1()">Coniform</button>
+    <br><br>
+    <button onclick="prompt1()">Prmpt</button>
+    <br><br>
+    <button onclick="openWindow()">Open new Window</button>
+    <br><br>
     <button onclick="autoclosewin()">Close window opened with Script</button>
-</body>
+    <br><br>
+    <button onclick="winwidth()">Window Inner Width</button>
+    <br><br>
+    <button onclick="winwidth()">Window Inner Height</button>
+    <br><br>
+    <button onclick="winscroll()">Window Scroll</button>
+    <br><br>
+    <button onclick="winReload()">Window Reload</button>
+    <br><br>
+    <button onclick="winRedirect()">Window Redirect</button>
+    <br><br>
+    <button onclick="winCurrentURL()">Current URL</button>
+    <br><br>
+    <button onclick="winHostName()">Current Host</button>
+    <br><br>
+    <button onclick="setTimeOut1">Timer Alert Message</button>
+    <br><br>
+    <button onclick="winInterval()">Messages After Interval</button>
+    <br><br>
+    <button onclick="winClearTimeOut()">Clear Time Out</button>
+    <br><br>
+    <button onclick="winDocTitle()">Document Title</button>
+    <br><br>
+    <button onclick="winPrint()">Print()</button>
+    <br><br>
+    <button onclick="winScreenWidth()">Screen Width</button>
+    <br><br>
+    <button onclick="winFocus()">Window Focus</button>
+</body> 
 <script>
     //1. Window Alert
     function alert1() {
         window.alert("Hello, Royal!")
     }
     //2. Coniform
-    function coniform() {
-        let result = window.confirm("Do you want to continue: ");
-        console.log("Coniform Result: " + result)
+    function coniform1() {
+        let result = window.confirm("Do you want to Continue: ")
+        console.log(result)
     }
-    //3. Prompt
+    // 3. Prompt
     function prompt1() {
-        let name = window.prompt("Enter your Name; ");
-        console.log("Prompt: " + name)
+        let name = window.prompt("Enter your Name: ")
+        console.log(name)
     }
-    function openwindow() {
-        window.open("https://www.youtube.com/")
+    // 4. Open a new tab
+    function openWindow() {
+        window.open("https://www.google.com/")
     }
-    //5. Close the window opened via script
+    // 5. Close window opened via script
     function autoclosewin() {
-        let win = window.open("", "", "width = 500, height = 500")
-        win.document.write("This window will be closed in 2 seconds")
+        let win = window.open("", "", "width=500 heigt = 500")
+        win.document.write("This window will cloase in 2 seconds")
         setTimeout(() => win.close(), 2000)
     }
+    // 6. Get window width
+    function winwidth() {
+        console.log("Window Inner Width: ", window.innerWidth)
+    }
+    // 7. Get window height
+    function winheight() {
+        console.log("Window Inner Height: ", window.outerHeight)
+    }
+    // 8. Scroll vertically
+    function winscroll() {
+        window.scrollTo(0, 1000);
+    }
+    //9. Reload Page
+    function winReload() {
+        window.location.reload(); //location: for current url and reload() is a method of location
+    }
+    //10. Redirect
+    function winRedirect() {
+        window.location.href = "https://www.google.com/"
+    }
+    //11. Current URL
+    function winCurrentURL() {
+        console.log("Current URL: ", window.location.href)
+    }
+    //12. Host Name
+    function winHostName() {
+        console.log("HostName: ", window.location.hostname)
+    }
+    //13. Set Timeout
+    function setTimeOut1() {
+        window.setTimeOut(() => { alert("Hello after 2 seconds") }, 2000)
+    }
+    //14. Set Interval
+    function winInterval() {
+        window.setInterval(() => { console.log("\nEvery 3 seond") }, 3000);
+    }
+    //15. Access Document Title ------------ Left
+    function winClearTimeOut() {
+        // 15. Clear timeout
+        let timeoutId = setTimeout(() => alert("Ghani var lagiiii!"), 5000);
+        clearTimeout(timeoutId);
+        // let timeoutId = setTimeOut(() => alert("It took a lot of Time"),5000);
+        // clearTimeout(timeoutId)
+    }
+    //16. Access Document Title
+    function winDocTitle() {
+        console.log(window.document.title)
+    }
+    //17. Printing a Page
+    function winPrint()
+    {
+        window.print();
+    }
+    //18. Screen Width
+    function winScreenWidth()
+    {
+        console.log("Screen Width: ", window.screen.width)
+    }
+    //19. Window Focus
+    function winFocus()//----------------- Left
+    {
+        window.onfocus = () => console.log("Window is in Focus");
+    }
+    //20. On Resize
+    window.onresize = () => {console.log("Window Resized", window.innerHeight, "   ", window.innerWidth)}
 </script>
 
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+
+    <style>
+    body{
+        margin: 0%;
+        padding: 0%;
+        background-color: cadetblue;
+    }
+
+    .disp{
+        visibility: hidden;
+    }
+
+    .invalidcss{
+        visibility: visible;
+        background-color:red;
+        border: 2px solid black;
+        color: white;
+        width: 200px;
+        z-index: 1;
+        position: absolute;
+        top: -160px;
+        left: 590px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .validcss{
+        visibility: visible;
+        background-color: green;
+        border: 1px solid white;
+        color: white;
+        width: 150px;
+        z-index: 1;
+        position: absolute;
+        top: -160px;
+        left: 640px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    button{
+        position: absolute;
+        top: 230px;
+        left: 120px;
+        height: 30px;
+        width: 100px;
+    }
+
+    .box{
+        border: 5px solid black;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        position: absolute;
+        top: 160px;
+        left: 550px;
+        height: 250px;
+        width: 300px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+        <center><div style="font-size: 25px;">Login Form</div></center>
+        <div style="padding-top: 20px;">Email:</div>
+        <div><input type="email" name="ln" id="i1" style="border-radius: 10px; height: 30px; width: 290px;"></div>
+        
+        
+        <div style="padding-top: 20px;">Password :</div>
+        <div><input type="email" name="em" id="i2" style="border-radius: 10px; height: 30px; width: 290px;"></div>
+        
+        <button onclick="check()">Login</button>
+
+        <div id="d1" class="disp">Login Successful</div>
+        <div id="d2" class="disp">Invalid Email Or Password</div>
+    
+    </div>
+
+    <script>
+        function check()
+        {
+            a=document.getElementById('i1').value
+            b=document.getElementById('i2').value
+
+            console.log(a)
+            if(a!='admin@gmail.com' || b!='admin123')
+            {
+                document.getElementById('d2').classList.add('invalidcss')
+                document.getElementById('d1').classList.remove('validcss')
+                document.getElementById('i1').style.borderColor="red"
+                document.getElementById('i1').style.backgroundColor="red"
+                document.getElementById('i2').style.borderColor="red"
+                document.getElementById('i2').style.backgroundColor="red"
+            }else
+            {
+                document.getElementById('d1').classList.add('validcss')
+                document.getElementById('d2').classList.remove('invalidcss')
+                document.getElementById('i1').style.borderColor="green"
+                document.getElementById('i1').style.backgroundColor="lightgreen"
+                document.getElementById('i2').style.borderColor="green"
+                document.getElementById('i2').style.backgroundColor="lightgreen"
+            }
+        }
+    </script>
+</body>
+</html>

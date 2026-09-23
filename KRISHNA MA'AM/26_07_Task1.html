@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      const students = [
+            { id: 1, name: "Amit", city: "Ahmedabad", marks: 78 },
+            { id: 2, name: "Neha", city: "Surat", marks: 85 },
+            { id: 3, name: "Rahul", city: "Vadodara", marks: 67 },
+            { id: 4, name: "Priya", city: "Rajkot", marks: 90 },
+            { id: 5, name: "Karan", city: "Ahmedabad", marks: 72 },
+            { id: 6, name: "Sneha", city: "Surat", marks: 81 },
+            { id: 7, name: "Vikas", city: "Mumbai", marks: 88 },
+            { id: 8, name: "Pooja", city: "Pune", marks: 76 },
+            { id: 9, name: "Arjun", city: "Delhi", marks: 69 },
+            { id: 10, name: "Meena", city: "Ahmedabad", marks: 84 },
+        ];
+
+    ans1=students.filter(x=>x.city=="Ahmedabad").map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans1)
+
+    ans2=students.filter(x=>x.marks>=80).map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans2)
+
+    ans3=students.filter(x=>x.city=="Surat").map(x=>x.marks).reduce((sum,x)=>x+sum,0)
+    console.log(ans3)
+
+    ans4=students.filter(x=>x.marks>75).map(x=>x.marks).reduce((sum,x)=>x+sum,0)
+    console.log(ans4)
+
+    ans5=students.filter(x=>x.marks>80).map(x=>x.marks).reduce(count=>count+1,0)
+    console.log(ans5)
+    
+    ans6=students.filter(x=>x.marks<80).map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans6)
+    
+    ans7=students.filter(x=>x.marks>=70&&x.marks<=90).map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans7)
+    
+    ans8=students.filter(x=>x.name.substring(0,1)=="A").map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans8)
+
+    sp9=students.filter(x=>x.city=="Ahmedabad").map(x=>x.marks).reduce(count=>count+1,0)
+
+    ans9=ans1/sp9;
+    console.log(ans9)
+
+    ans10=students.map(x=>x.marks).reduce((max,x)=>{if(x>max)return x;else return max},0)
+    console.log(ans10)
+
+    ans11=students.map(x=>x.marks).reduce((min,x)=>{if(x<min)return x;else return min},ans10)
+    console.log(ans11)
+
+    ans12=sp9
+    console.log(ans12)
+
+    ans13=students.filter(x=>x.marks>80).map(x=>x.name)
+    console.log(ans13)
+
+    ans14=students.filter(x=>x.city=="Mumbai").map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans14)
+
+    ans15=students.filter(x=>x.marks%2==0).map(x=>x.name)
+    console.log(ans15)
+    
+    ans16=students.filter(x=>x.marks%2==1).map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans16)
+    
+    ans17=students.filter(x=>x.city=="Ahmedabad"&&x.marks>75).map(x=>x.name)
+    console.log(ans17)
+
+    ans18=students.filter(x=>x.name.substring(0,1)=="S").map(x=>x.name).reduce(count=>count+1,0)
+    console.log(ans18)
+    
+    ans=students.map(x=>x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans)
+
+    ans19=students.map(x=>2*x.marks).reduce((sum,x)=>sum+x,0)
+    console.log(ans19)
+    </script>
+</body>
+</html>

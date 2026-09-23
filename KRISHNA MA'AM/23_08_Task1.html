@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height:2000px">
+    <button onclick="Open()">Open New Window</button>
+    <button onclick="Close()">Close New Window(2 sec)</button>
+    <button onclick="Onmove()">Move New Window</button>
+    <button onclick="inhw()">Inner Height & Width</button>
+    <button onclick="othw()">Outer Height & Width</button>
+    <button onclick="google()">Open Google</button>
+    <button onclick="sv()">Scroll Vertically</button>
+    <button onclick="rel()">Reload</button>
+    <button onclick="curr()">Current URL</button>
+    <script>
+        var win
+
+        window.alert("Welcome to my website");
+        let res=window.confirm("Are you sure you want to continue?");
+        console.log("Result : "+res);
+        let name=window.prompt("Enter your name : ");
+        console.log("Name : "+name);
+        function Open()
+        {
+            win=window.open('','myWindow','width=200px,height=200px');
+            win.focus();
+        }
+        function Close()
+        {
+            setTimeout(()=>{win.close()},2000)
+        }
+        function inhw()
+        {
+            console.log(`Inner Height : ${window.innerHeight}`)
+            console.log(`Inner Width : ${window.innerWidth}`);
+            console.log('-----------------------------');
+        }
+        function othw()
+        {
+            console.log(`Outer Height : ${window.outerHeight}`)
+            console.log(`Outer Width : ${window.outerWidth}`);
+            console.log('-----------------------------');
+        }
+
+        window.onresize = () => 
+        {
+            console.log(`InnerHeight : ${window.innerHeight}`) 
+            console.log(`InnerWidth : ${window.innerWidth}`) 
+            console.log(`OuterHeight : ${window.outerHeight}`) 
+            console.log(`OuterWidth : ${window.outerWidth}`);
+            console.log('-----------------------------');
+        }
+        function Onmove()
+        {
+            win.moveTo(300,300);
+            win.focus();
+        }
+
+        function google()
+        {
+            window.location.href='https://www.google.com';
+        }
+
+        function sv()
+        {
+            window.scrollTo(0,1000);
+        }
+
+        function rel()
+        {
+            window.location.reload();
+        }
+
+        function curr()
+        {
+            console.log(`Current URL : ${window.location.href}` ); 
+        }
+    </script>
+</body>
+</html>
